@@ -1,14 +1,15 @@
-// Базовые стили
-@import "./base/fonts.scss";
-@import "./base/base.scss";
-@import "./base/visually-hidden.scss";
-// Добавляет миксины и переменные
-@import "./mixins.scss";
+// Global
+// ---------------------------------
 @import "./variables.scss";
-// Блоки
-@import "../sass/blocks/page.scss";
+@import "./mixins.scss";
+@import "./global/fonts.scss";
+@import "./global/reboot.scss";
+@import "./global/utils.scss";
+@import "./global/container.scss";
+
+// Blocks
+// ---------------------------------
 @import "../sass/blocks/header.scss";
-@import "../sass/blocks/container.scss";
 @import "../sass/blocks/nav.scss";
 @import "../sass/blocks/hero.scss";
 @import "../sass/blocks/title.scss";

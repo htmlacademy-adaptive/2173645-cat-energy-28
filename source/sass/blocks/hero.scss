@@ -1,0 +1,17 @@
+// Что-то у меня не получается одолеть этого кота, даже если прописать 100vw
+.hero__title {
+  margin: 0;
+  margin-bottom: 29px;
+}
+
+.hero__inner {
+  padding-top: 23px;
+  background: $color-apple url("../../img/deco/cat-lick.jpg") center/cover no-repeat;
+}
+
+.hero__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-default-white;
+}

@@ -1,0 +1,22 @@
+.product__title {
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-nero;
+}
+
+.product__title--primary {
+  color: $color-black;
+}
+
+.product__inner {
+  font-family: $ff-lato;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-charcoal;
+}
+
+.product__description {
+  font-family: $ff-lato;
+  font-size: 12px;
+  line-height: 16px;
+}

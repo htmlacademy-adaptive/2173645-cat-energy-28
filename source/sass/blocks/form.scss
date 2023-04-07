@@ -1,0 +1,41 @@
+.program-form__subtitle {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.form__label {
+  color: $color-charcoal;
+}
+
+.form__label--primary {
+  color: $color-nero;
+}
+
+.form__label--secondary {
+  color: $color-default-black;
+}
+
+.form__field {
+  font: inherit;
+  color: $color-charcoal;
+}
+
+.form__list {
+  @include list-reset;
+}
+
+.form__legend {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.form__textarea {
+  font: inherit;
+  color: $color-charcoal;
+}
+
+.form__text {
+  font-family: $ff-lato;
+  font-size: 14px;
+  line-height: 16px;
+}

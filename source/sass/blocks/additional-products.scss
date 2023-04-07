@@ -1,0 +1,41 @@
+.additional-products {
+  padding: 25px 0 35px 0;
+}
+
+.additional-products p {
+  margin: 0;
+}
+
+.additional-products__title {
+  margin: 0;
+  margin-bottom: 36px;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.additional-products__list {
+  @include list-reset;
+}
+
+.additional-products__subtitle {
+  font-size: 16px;
+  line-height: 16px;
+  color: $color-nero;
+}
+
+.additional-products__inner {
+  font-family: $ff-lato;
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-charcoal;
+}
+
+.additional-products__promotion {
+  padding: 43px 0;
+  background: $color-apple url("../../img/deco/cat-bag.jpg") center/cover no-repeat;
+}
+
+.additional-products__slogan {
+  color: $color-default-white;
+}
+
