@@ -1,0 +1,400 @@
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/lato/Lato-Regular.woff2") format("woff2"), url("../../fonts/lato/Lato-Regular.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/oswald/oswaldregular.woff2") format("woff2"), url("../../fonts/oswald/oswaldregular.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../fonts/oswald/oswaldmedium.woff2") format("woff2"), url("../../fonts/oswald/oswaldmedium.woff") format("woff");
+  font-display: swap;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+html {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: #000000;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.header {
+  padding: 11px 0 17px 0;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.hero__title {
+  margin: 0;
+  margin-bottom: 29px;
+}
+
+.hero__inner {
+  padding-top: 23px;
+  background: #68b738 url("../../img/deco/cat-lick.jpg") center/cover no-repeat;
+}
+
+.hero__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+}
+
+.title {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.title--primary {
+  color: #ffffff;
+}
+
+.button {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  background-color: #68b738;
+  color: #ffffff;
+  border: 0;
+}
+
+.button--primary {
+  background-color: #f2f2f2;
+  color: #444444;
+}
+
+.programs {
+  padding: 20px 0 20px 0;
+}
+
+.programs__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.program {
+  background-color: #f2f2f2;
+}
+
+.program__title {
+  font-size: 24px;
+  line-height: 37px;
+}
+
+.program__text {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 14px;
+  color: #444444;
+}
+
+.program__link {
+  line-height: 16px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.advantages__text {
+  margin: 0;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 14px;
+  color: #444444;
+}
+
+.results {
+  padding: 25px 0 40px 0;
+  background-color: #f2f2f2;
+}
+
+.results__title {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.results__description {
+  margin: 0;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+}
+
+.results__terms-desc {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.results__terms-term {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  color: #444444;
+}
+
+.results__text {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.address-info {
+  background-color: #f2f2f2;
+}
+
+.address-info--primary {
+  background-color: #ffffff;
+}
+
+.address {
+  padding: 26px 0;
+}
+
+.address__subtitle {
+  margin: 0;
+  line-height: 20px;
+  color: #111111;
+}
+
+.address__text {
+  margin: 0;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #444444;
+}
+
+.footer {
+  background-color: #f2f2f2;
+  padding: 40px 0;
+}
+
+.footer__logo-academy {
+  font-family: "Lato", "Arial", sans-serif;
+  line-height: 19px;
+  color: #444444;
+}
+
+.socials__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog {
+  padding: 25px 0 27px 0;
+}
+
+.catalog__title {
+  margin: 0;
+  margin-bottom: 41px;
+}
+
+.catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product__title {
+  font-size: 16px;
+  line-height: 20px;
+  color: #222222;
+}
+
+.product__title--primary {
+  color: #111111;
+}
+
+.product__inner {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
+}
+
+.product__description {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.additional-products {
+  padding: 25px 0 35px 0;
+}
+
+.additional-products p {
+  margin: 0;
+}
+
+.additional-products__title {
+  margin: 0;
+  margin-bottom: 36px;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.additional-products__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.additional-products__subtitle {
+  font-size: 16px;
+  line-height: 16px;
+  color: #222222;
+}
+
+.additional-products__inner {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  color: #444444;
+}
+
+.additional-products__promotion {
+  padding: 43px 0;
+  background: #68b738 url("../../img/deco/cat-bag.jpg") center/cover no-repeat;
+}
+
+.additional-products__slogan {
+  color: #ffffff;
+}
+
+.program-form {
+  padding: 27px 0 32px 0;
+}
+
+.program-form__title {
+  margin: 0;
+  margin-bottom: 37px;
+}
+
+.program-form__subtitle {
+  margin: 0;
+}
+
+.program-form__subtitle {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.form__label {
+  color: #444444;
+}
+
+.form__label--primary {
+  color: #222222;
+}
+
+.form__label--secondary {
+  color: #000000;
+}
+
+.form__field {
+  font: inherit;
+  color: #444444;
+}
+
+.form__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.form__legend {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.form__textarea {
+  font: inherit;
+  color: #444444;
+}
+
+.form__text {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+}
+/*# sourceMappingURL=style.css.map */
