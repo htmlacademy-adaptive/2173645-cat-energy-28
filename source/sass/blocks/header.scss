@@ -2,6 +2,18 @@
   padding: 11px 0 17px 0;
 }
 
-.nav__list {
-  @include list-reset;
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: space-between;
+  width: 190px;
+
+  @include vp-tab {
+    display: block;
+  }
 }

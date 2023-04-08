@@ -3,3 +3,15 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin vp-tab {
+  @media (min-width: $vp-tab) {
+    @content;
+  }
+}
+
+@mixin vp-desk {
+  @media (min-width: $vp-desk) {
+    @content;
+  }
+}
