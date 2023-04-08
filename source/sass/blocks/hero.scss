@@ -11,7 +11,12 @@
 
 .hero__description {
   margin: 0;
+  margin-bottom: 29px;
   font-size: 14px;
   line-height: 14px;
   color: $color-default-white;
+}
+
+.hero__picture {
+  margin-bottom: 3px;
 }
