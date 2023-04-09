@@ -1,0 +1,24 @@
+.hero__title {
+  margin: 0;
+  margin-bottom: 29px;
+  font-weight: 400;
+  text-align: center;
+}
+// Что-то у меня не получается одолеть этого кота, даже если прописать 100vw
+.hero__inner {
+  padding-top: 23px;
+  background: $color-apple url("../../img/deco/cat-lick.jpg") center/cover no-repeat;
+}
+
+.hero__description {
+  margin: 0;
+  margin-bottom: 29px;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: $color-default-white;
+}
+
+.hero__picture {
+  margin-bottom: 3px;
+}

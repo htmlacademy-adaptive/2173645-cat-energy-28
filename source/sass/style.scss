@@ -1,1 +1,29 @@
-// Начните писать стили здесь
+// Global
+// ---------------------------------
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./global/fonts.scss";
+@import "./global/reboot.scss";
+@import "./global/utils.scss";
+@import "./global/container.scss";
+
+// Blocks
+// ---------------------------------
+@import "../sass/blocks/header.scss";
+@import "../sass/blocks/nav.scss";
+@import "../sass/blocks/hero.scss";
+@import "../sass/blocks/title.scss";
+@import "../sass/blocks/button.scss";
+@import "../sass/blocks/programs.scss";
+@import "../sass/blocks/program.scss";
+@import "../sass/blocks/advantages.scss";
+@import "../sass/blocks/results.scss";
+@import "../sass/blocks/address-info.scss";
+@import "../sass/blocks/address.scss";
+@import "../sass/blocks/footer.scss";
+@import "../sass/blocks/socials.scss";
+@import "../sass/blocks/catalog.scss";
+@import "../sass/blocks/product.scss";
+@import "../sass/blocks/additional-products.scss";
+@import "../sass/blocks/program-form.scss";
+@import "../sass/blocks/form.scss";

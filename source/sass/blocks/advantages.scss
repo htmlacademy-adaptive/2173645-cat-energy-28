@@ -1,0 +1,19 @@
+.advantages {
+  padding: 10px 0 40px 0;
+}
+
+.advantages__list {
+  @include list-reset;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.advantages__text {
+  margin: 0;
+  font-family: $ff-lato;
+  font-size: 14px;
+  color: $color-charcoal;
+}

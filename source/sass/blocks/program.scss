@@ -1,0 +1,24 @@
+.program {
+  padding: 18px 20px;
+  background-color: $color-white-smoke;
+}
+
+.program__title {
+  margin: 0;
+  margin-bottom: 29px;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+}
+
+.program__text {
+  margin: 0;
+  margin-bottom: 38px;
+  font-family: $ff-lato;
+  font-size: 14px;
+  color: $color-charcoal;
+}
+
+.program__link {
+  line-height: 16px;
+}

@@ -1,0 +1,35 @@
+.results {
+  padding: 25px 0 40px 0;
+  background-color: $color-white-smoke;
+}
+
+.results__title {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.results__description {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: $ff-lato;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-charcoal;
+}
+
+.results__terms-desc {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.results__terms-term {
+  font-family: $ff-lato;
+  font-size: 12px;
+  line-height: 12px;
+  color: $color-charcoal;
+}
+
+.results__text {
+  font-size: 14px;
+  line-height: 20px;
+}
