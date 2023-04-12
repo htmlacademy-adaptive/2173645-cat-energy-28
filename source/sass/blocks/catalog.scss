@@ -13,4 +13,16 @@
 
 .catalog__list {
   @include list-reset;
+  display: grid;
+  gap: 19px;
+
+  @include vp-tab {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+
+  @include vp-desk {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+  }
 }

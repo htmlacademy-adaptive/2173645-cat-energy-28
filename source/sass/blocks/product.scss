@@ -1,4 +1,23 @@
+.product {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+
+  &--primary {
+    grid-template-columns: 1fr;
+  }
+
+  @include vp-tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 511px;
+  }
+}
+
 .product__title {
+  max-width: 76px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -6,11 +25,14 @@
 }
 
 .product__title--primary {
+  max-width: 100%;
   text-align: center;
   color: $color-black;
 }
 
 .product__inner {
+  display: flex;
+  justify-content: space-between;
   font-family: $ff-lato;
   font-size: 12px;
   line-height: 16px;
@@ -25,4 +47,9 @@
 
 .product__description--center {
   text-align: center;
+}
+
+.product__button {
+  grid-column: 1 / -1;
+  justify-self: stretch;
 }
