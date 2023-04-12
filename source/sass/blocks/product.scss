@@ -6,6 +6,7 @@
 }
 
 .product__title--primary {
+  text-align: center;
   color: $color-black;
 }
 
@@ -20,4 +21,8 @@
   font-family: $ff-lato;
   font-size: 12px;
   line-height: 16px;
+}
+
+.product__description--center {
+  text-align: center;
 }

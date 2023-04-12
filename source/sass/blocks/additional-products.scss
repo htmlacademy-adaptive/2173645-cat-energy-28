@@ -2,10 +2,6 @@
   padding: 25px 0 35px 0;
 }
 
-.additional-products p {
-  margin: 0;
-}
-
 .additional-products__title {
   margin: 0;
   margin-bottom: 36px;
@@ -19,6 +15,8 @@
 }
 
 .additional-products__subtitle {
+  margin: 0;
+  margin-bottom: 13px;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
@@ -38,5 +36,6 @@
 }
 
 .additional-products__slogan {
+  text-align: center;
   color: $color-default-white;
 }
