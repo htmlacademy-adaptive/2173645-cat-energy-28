@@ -6,4 +6,8 @@
 
 .title--primary {
   color: $color-default-white;
+
+  @include vp-tab {
+    color: $color-default-black;
+  }
 }

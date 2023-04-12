@@ -1,5 +1,15 @@
 .program-form {
   padding: 27px 0 32px 0;
+
+  @include vp-desk {
+    padding: 223px 0 82px 0;
+  }
+}
+
+.program-form .container {
+  @include vp-tab {
+    padding: 0 67px 0 70px;
+  }
 }
 
 .program-form__title {
@@ -8,5 +18,12 @@
 }
 
 .program-form__subtitle {
-  margin: 0;
+  max-width: 226px;
+  margin: 0 0 39px 0;
+  font-size: 14px;
+  line-height: 18px;
+
+  @include vp-tab {
+    margin: 0 0 66px 0;
+  }
 }

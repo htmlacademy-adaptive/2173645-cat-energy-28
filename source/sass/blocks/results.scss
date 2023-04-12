@@ -1,6 +1,51 @@
 .results {
   padding: 25px 0 40px 0;
   background-color: $color-white-smoke;
+
+  @include vp-tab {
+    background-color: $color-default-white;
+  }
+}
+
+.results__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include vp-desk {
+    display: flex;
+    flex-direction: column;
+    width: 436px;
+  }
+}
+// Сомневаюсь, что хорошая идея делать так с контейнером. Нужна доп обертка? я так же сделал хедеру.
+.results .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include vp-desk {
+    flex-direction: row;
+  }
+}
+
+.results__inner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @include vp-tab {
+    justify-content: space-between;
+  }
+
+  @include vp-desk {
+    flex-direction: column;
+  }
+}
+
+.results__terms-inner {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .results__title {
@@ -17,6 +62,11 @@
   color: $color-charcoal;
 }
 
+.results__terms {
+  display: flex;
+  gap: 42px;
+}
+
 .results__terms-desc {
   font-size: 24px;
   line-height: 24px;
@@ -29,7 +79,26 @@
   color: $color-charcoal;
 }
 
+.results__text-wrapper {
+  @include vp-tab {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include vp-tab {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
 .results__text {
   font-size: 14px;
   line-height: 20px;
+}
+
+.results__slider-images {
+  display: flex;
+  justify-content: center;
+  // Временно пока норм слайдер не сделали
+  flex-wrap: wrap;
 }

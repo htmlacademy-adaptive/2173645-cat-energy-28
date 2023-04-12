@@ -1,24 +1,66 @@
+// Додумался засунуть фон сюда, но теперь мешает фоновая заливка, без которой никак)
+.hero {
+  padding: 27px 0 0 0;
+  background: url("../../img/deco/cat-lick.jpg") top no-repeat;
+
+  @include vp-tab {
+    background: initial;
+  }
+
+  @include vp-desk {
+    background: url("../../img/deco/cat-lick.jpg") top right no-repeat;
+    padding: 223px 0 0 0;
+  }
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include vp-tab {
+    position: relative;
+    align-items: start;
+    margin: 0 0 0 88px;
+    // знаю, что не очень. временное решение, пока с тобой не обсудили.
+    min-height: 972px;
+  }
+
+  @include vp-desk {
+    max-width: 414px;
+    min-height: 457px;
+  }
+}
+
 .hero__title {
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 25px;
   font-weight: 400;
   text-align: center;
-}
-// Что-то у меня не получается одолеть этого кота, даже если прописать 100vw
-.hero__inner {
-  padding-top: 23px;
-  background: $color-apple url("../../img/deco/cat-lick.jpg") center/cover no-repeat;
+
+  @include vp-tab {
+    text-align: left;
+  }
 }
 
 .hero__description {
-  margin: 0;
-  margin-bottom: 29px;
+  margin: 0 0 29px 0;
   font-size: 14px;
   line-height: 14px;
   text-align: center;
   color: $color-default-white;
+
+  @include vp-tab {
+    color: $color-default-black;
+    text-align: left;
+  }
 }
 
 .hero__picture {
   margin-bottom: 3px;
+
+  @include vp-tab {
+    position: absolute;
+    z-index: -1;
+  }
 }

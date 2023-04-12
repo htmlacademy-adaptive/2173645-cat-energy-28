@@ -4,6 +4,12 @@
   list-style: none;
 }
 
+@mixin vp-mob {
+  @media (max-width: $vp-mob) {
+    @content;
+  }
+}
+
 @mixin vp-tab {
   @media (min-width: $vp-tab) {
     @content;
@@ -15,3 +21,9 @@
     @content;
   }
 }
+
+// @mixin m-lc($size) {
+//   &:not(:last-child) {
+//     margin-bottom: $size;
+//   }
+// }

@@ -4,4 +4,17 @@
 
 .programs__list {
   @include list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include vp-tab {
+    gap: 30px;
+  }
+
+  @include vp-desk {
+    flex-direction: row;
+    align-items: center;
+    gap: 80px;
+  }
 }

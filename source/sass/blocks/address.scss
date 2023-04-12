@@ -1,17 +1,40 @@
 .address {
+  display: flex;
+  justify-content: space-between;
   padding: 26px 0;
+
+  @include vp-desk {
+    max-width: 560px;
+    padding: 56px 60px 56px 80px;
+  }
 }
 
 .address__subtitle {
+  width: 139px;
   margin: 0;
   line-height: 20px;
   color: $color-black;
+
+  @include vp-tab {
+    width: 172px;
+  }
 }
 
 .address__text {
+  width: 139px;
   margin: 0;
   font-family: $ff-lato;
   font-size: 14px;
   line-height: 20px;
   color: $color-charcoal;
+
+  @include vp-tab {
+    width: 160px;
+    text-align: right;
+  }
+
+  @include vp-desk {
+    text-align: left;
+  }
+
 }
