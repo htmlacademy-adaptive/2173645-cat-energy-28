@@ -3,3 +3,29 @@
   font-size: 20px;
   line-height: 20px;
 }
+
+.nav__list {
+  @include list-reset;
+  display: flex;
+
+  @include vp-mob {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  @include vp-tab {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.nav__toggle {
+  @include vp-tab {
+    display: none;
+  }
+}

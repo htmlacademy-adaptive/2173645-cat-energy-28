@@ -1,7 +1,27 @@
 .address-info {
   background-color: $color-white-smoke;
+
+  &--primary {
+    background-color: $color-default-white;
+  }
+
+  @include vp-desk {
+    position: relative;
+    z-index: 1;
+    padding: 95px 0 107px 0px;
+  }
 }
 
-.address-info--primary {
-  background-color: $color-default-white;
+.address-info__map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include vp-desk {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100vw;
+
+  }
 }

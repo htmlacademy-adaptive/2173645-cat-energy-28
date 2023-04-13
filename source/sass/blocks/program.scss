@@ -1,6 +1,27 @@
 .program {
   padding: 18px 20px;
   background-color: $color-white-smoke;
+
+  @include vp-tab {
+    min-width: 708px;
+    min-height: 372px;
+  }
+
+  @include vp-desk {
+    min-width: 570px;
+    min-height: 374px;
+  }
+}
+
+.program__inner {
+  @include vp-tab {
+    width: 70%;
+  }
+
+  @include vp-desk {
+    max-width: 460px;
+    width: 100%;
+  }
 }
 
 .program__title {
@@ -12,8 +33,7 @@
 }
 
 .program__text {
-  margin: 0;
-  margin-bottom: 38px;
+  margin: 0 0 38px 0;
   font-family: $ff-lato;
   font-size: 14px;
   color: $color-charcoal;

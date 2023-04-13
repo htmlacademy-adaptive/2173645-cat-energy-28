@@ -1,7 +1,26 @@
 .header {
-  padding: 11px 0 17px 0;
+  position: relative;
+  padding: 10px 0 17px 0;
+
+  @include vp-desk {
+    position: absolute;
+    width: 100vw;
+    padding: 53px 0 32px 0;
+  }
 }
 
-.nav__list {
-  @include list-reset;
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: space-between;
+  width: 190px;
+
+  @include vp-tab {
+    justify-content: flex-start;
+  }
 }

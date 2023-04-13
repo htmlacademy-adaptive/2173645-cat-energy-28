@@ -4,6 +4,30 @@
 
 .advantages__list {
   @include list-reset;
+  display: grid;
+  gap: 20px;
+
+  @include vp-tab {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 37px 150px;
+  }
+
+  @include vp-desk {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 37px 150px;
+  }
+}
+
+.advantages__inner {
+  // Свг как-то криво масштабируется, если делать флексом, а гридом что-то не прикольно
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 20px;
+
+  @include vp-tab {
+    grid-template-columns: 1fr;
+    max-width: 260px;
+  }
 }
 
 .advantages__title {

@@ -1,5 +1,9 @@
 .catalog {
   padding: 27px 0 25px 0;
+
+  @include vp-desk {
+    padding: 223px 0 0 0;
+  }
 }
 
 .catalog__title {
@@ -9,4 +13,16 @@
 
 .catalog__list {
   @include list-reset;
+  display: grid;
+  gap: 19px;
+
+  @include vp-tab {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+
+  @include vp-desk {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+  }
 }
