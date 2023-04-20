@@ -22,3 +22,33 @@
     gap: 80px;
   }
 }
+
+.catalog__list-item {
+  position: relative;
+
+  @include vp-mob {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -20px;
+      width: 100vw;
+      height: 1px;
+      background: #ebebeb;
+    }
+  }
+}
+
+.catalog__list-item:last-child {
+  @include vp-mob {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -19px;
+      left: -20px;
+      width: 100vw;
+      height: 1px;
+      background: #ebebeb;
+    }
+  }
+}
