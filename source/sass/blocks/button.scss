@@ -1,8 +1,10 @@
 .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
   margin: 0;
-  padding: 0;
   font-size: 14px;
-  text-align: center;
   background-color: $color-apple;
   color: $color-default-white;
   border: 0;

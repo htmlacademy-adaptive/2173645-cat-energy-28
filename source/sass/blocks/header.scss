@@ -1,10 +1,8 @@
 .header {
   position: relative;
-  padding: 10px 0 17px 0;
+  padding: 13px 0 15px 0;
 
   @include vp-desk {
-    position: absolute;
-    width: 100vw;
     padding: 53px 0 32px 0;
   }
 }
@@ -13,6 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .header__logo {

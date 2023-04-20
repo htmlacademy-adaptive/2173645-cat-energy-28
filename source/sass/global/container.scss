@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 20px;
 
@@ -9,6 +9,6 @@
   }
 
   @include vp-desk {
-    padding: 0 110px;
+    padding: 0 40px;
   }
 }

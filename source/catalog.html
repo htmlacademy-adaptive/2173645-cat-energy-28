@@ -15,7 +15,7 @@
         <img src="img/logos/logo-mobile.svg" width="33" height="38" alt="Логотип сайта Кэт энерджи.">
         <img src="img/logos/logo-2.svg" width="101" height="18" alt="Логотип сайта Кэт энерджи.">
       </a>
-      <nav class="nav">
+      <nav class="nav nav--closed nav--nojs">
         <button class="nav__toggle" type="button">
           <span class="visually-hidden">Переключатель отображения меню</span>
           <span class="nav__toggle-in">
@@ -25,10 +25,10 @@
           </span>
         </button>
         <ul class="nav__list">
-          <li class="nav__item">
+          <li class="nav__item nav__item--current">
             <a class="nav__link" href="index.html">ГЛАВНАЯ</a>
           </li>
-          <li class="nav__item nav__item--current">
+          <li class="nav__item">
             <a class="nav__link">КАТАЛОГ ПРОДУКЦИИ </a>
           </li>
           <li class="nav__item">
@@ -399,6 +399,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/nav.js"></script>
 </body>
 
 </html>

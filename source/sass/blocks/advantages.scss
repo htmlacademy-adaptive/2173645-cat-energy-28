@@ -1,5 +1,5 @@
 .advantages {
-  padding: 10px 0 40px 0;
+  padding: 10px 0 49px 0;
 }
 
 .advantages__list {
@@ -19,7 +19,6 @@
 }
 
 .advantages__inner {
-  // Свг как-то криво масштабируется, если делать флексом, а гридом что-то не прикольно
   display: grid;
   grid-template-columns: 60px 1fr;
   gap: 20px;
@@ -32,12 +31,13 @@
 
 .advantages__title {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 }
 
 .advantages__text {
   margin: 0;
   font-family: $ff-lato;
   font-size: 14px;
+  line-height: 18px;
   color: $color-charcoal;
 }
