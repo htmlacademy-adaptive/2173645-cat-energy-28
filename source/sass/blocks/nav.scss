@@ -75,6 +75,7 @@
 
   @include vp-mob {
     position: absolute;
+    z-index: 2;
     top: 60px;
     left: 0;
     flex-direction: column;
@@ -115,10 +116,10 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    border-top: 1px solid  #d9d9d9;
+    border-top: 1px solid $color-gainsboro;
 
     &:last-child {
-      border-bottom: 1px solid  #d9d9d9;
+      border-bottom: 1px solid $color-gainsboro;
     }
   }
 }

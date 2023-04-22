@@ -1,5 +1,5 @@
 .results {
-  padding: 25px 0 56px;
+  padding: 25px 0 40px;
   background-color: $color-white-smoke;
 
   @include vp-tab {
@@ -10,6 +10,7 @@
 .results__wrapper {
   display: flex;
   flex-direction: column;
+  padding: 0 0 20px;
 
   @include vp-desk {
     width: 440px;
@@ -30,7 +31,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2px;
+  gap: 18px;
 
   @include vp-tab {
     justify-content: space-between;
@@ -42,10 +43,14 @@
 }
 
 .results__terms-inner {
+  position: relative;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
   gap: 8px;
+  padding: 15px 20px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
 }
 
 .results__title {
@@ -53,7 +58,7 @@
 }
 
 .results__description {
-  margin: 0 0 20px;
+  margin: 0 0 4px;
   font-family: $ff-lato;
   font-size: 14px;
   line-height: 18px;
@@ -63,7 +68,7 @@
 .results__terms {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 73px;
+  gap: 33px;
 }
 
 .results__terms-desc {
@@ -73,12 +78,15 @@
 }
 
 .results__terms-term {
+  position: absolute;
+  bottom: -16px;
   max-width: 80px;
   font-family: $ff-lato;
   font-size: 12px;
   line-height: 12px;
   color: $color-charcoal;
   text-align: center;
+  background-color: $color-white-smoke;
 }
 
 .results__text-wrapper {
@@ -102,9 +110,38 @@
   }
 }
 
-.results__slider-images {
-  display: flex;
-  justify-content: center;
-  // Временно пока норм слайдер не сделали
-  flex-wrap: wrap;
+.results__slider {
+  position: relative;
+  height: 256px;
+}
+
+.results__slider-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+
+  &--overlay {
+    z-index: 2;
+  }
+}
+// Не удалось сделать линию за кнопкой
+.results__slider-control {
+  position: absolute;
+  z-index: 4;
+  width: 40px;
+  height: 40px;
+  background: url("../img/deco/control.svg");
+  border: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -108px;
+    right: 18px;
+    z-index: 3;
+    width: 4px;
+    height: 256px;
+    background: #666666;
+  }
 }

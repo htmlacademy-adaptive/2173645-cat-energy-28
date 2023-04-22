@@ -2,11 +2,30 @@
   padding: 20px 0 35px 0;
 }
 
+
+.additional-products__title-wrapper {
+  position: relative;
+  display: flex;
+}
+
 .additional-products__title {
   margin: 0 0 36px;
+  padding: 0 21px 0 0;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+  background-color: $color-default-white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 14px;
+    width: calc(100% + 20px);
+    height: 2px;
+    background: $color-apple;
+  }
 }
 
 .additional-products__box {
