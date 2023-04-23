@@ -1,5 +1,20 @@
 .advantages {
+  position: relative;
   padding: 10px 0 49px 0;
+
+  @include vp-tab {
+    padding: 34px 0 49px 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 13px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: $color-gainsboro;
+    }
+  }
 }
 
 .advantages__list {
@@ -9,7 +24,7 @@
 
   @include vp-tab {
     grid-template-columns: repeat(2, 1fr);
-    gap: 37px 150px;
+    gap: 37px 62px;
   }
 
   @include vp-desk {
@@ -24,8 +39,48 @@
   gap: 20px;
 
   @include vp-tab {
+    position: relative;
     grid-template-columns: 1fr;
     max-width: 260px;
+    min-height: 280px;
+    padding: 29px 0 48px;
+    gap: 12px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 1px;
+      z-index: -1;
+      width: 140px;
+      height: 100%;
+    }
+
+    &--one::after {
+      right: 28px;
+      background: url("../img/deco/1.svg") no-repeat center;
+    }
+
+    &--two::after {
+      right: 11px;
+      background: url("../img/deco/2.svg") no-repeat center;
+    }
+
+    &--three::after {
+      right: 9px;
+      background: url("../img/deco/3.svg") no-repeat center;
+    }
+
+    &--four::after {
+      right: 5px;
+      background: url("../img/deco/4.svg") no-repeat center;
+    }
+  }
+}
+
+.advantages__img {
+  @include vp-tab {
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -40,4 +95,9 @@
   font-size: 14px;
   line-height: 18px;
   color: $color-charcoal;
+
+  @include vp-tab {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

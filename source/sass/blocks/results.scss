@@ -3,6 +3,7 @@
   background-color: $color-white-smoke;
 
   @include vp-tab {
+    padding: 29px 0 100px;
     background-color: $color-default-white;
   }
 }
@@ -11,6 +12,10 @@
   display: flex;
   flex-direction: column;
   padding: 0 0 20px;
+
+  @include vp-tab {
+    margin: 0 0 69px 0;
+  }
 
   @include vp-desk {
     width: 440px;
@@ -51,10 +56,18 @@
   padding: 15px 20px;
   border: 1px solid #cdcdcd;
   border-radius: 3px;
+
+  @include vp-tab {
+    padding: 16px 30px;
+  }
 }
 
 .results__title {
   margin: 0 0 44px;
+
+  @include vp-tab {
+    margin: 0 0 63px;
+  }
 }
 
 .results__description {
@@ -63,18 +76,33 @@
   font-size: 14px;
   line-height: 18px;
   color: $color-charcoal;
+
+  @include vp-tab {
+    margin: 0 0 38px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .results__terms {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 33px;
+
+  @include vp-tab {
+    gap: 40px;
+  }
 }
 
 .results__terms-desc {
   margin: 0;
   font-size: 24px;
   line-height: 24px;
+
+  @include vp-tab {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .results__terms-term {
@@ -87,12 +115,22 @@
   color: $color-charcoal;
   text-align: center;
   background-color: $color-white-smoke;
+
+  @include vp-tab {
+    bottom: -7px;
+    max-width: 125px;
+    font-size: 14px;
+    line-height: 14px;
+    background: $color-default-white;
+  }
 }
 
 .results__text-wrapper {
   @include vp-tab {
     display: flex;
     flex-direction: column;
+    align-self: center;
+    gap: 6px;
   }
 
   @include vp-desk {
@@ -106,13 +144,21 @@
   line-height: 20px;
 
   @include vp-tab {
+    font-size: 20px;
     text-align: right;
   }
 }
 
 .results__slider {
   position: relative;
+  width: 280px;
   height: 256px;
+  margin: 0 auto;
+
+  @include vp-tab {
+    width: 560px;
+    height: 512px;
+  }
 }
 
 .results__slider-img {
@@ -125,6 +171,14 @@
     z-index: 2;
   }
 }
+
+.results__img {
+  @include vp-tab {
+    width: 560px;
+    height: 512px;
+  }
+}
+
 // Не удалось сделать линию за кнопкой
 .results__slider-control {
   position: absolute;
@@ -133,6 +187,11 @@
   height: 40px;
   background: url("../img/deco/control.svg");
   border: 0;
+
+  @include vp-tab {
+    top: 236px !important;
+    right: 259px !important;
+  }
 
   &::before {
     content: "";
@@ -143,5 +202,10 @@
     width: 4px;
     height: 256px;
     background: #666666;
+
+    @include vp-tab {
+      top: -236px;
+      height: 512px;
+    }
   }
 }

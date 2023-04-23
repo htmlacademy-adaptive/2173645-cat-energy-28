@@ -5,8 +5,7 @@
   background-color: $color-white-smoke;
 
   @include vp-tab {
-    min-width: 708px;
-    min-height: 372px;
+    padding: 77px 28px 57px 53px;
   }
 
   @include vp-desk {
@@ -18,7 +17,8 @@
 // что-то с этим сделать
 .program__inner {
   @include vp-tab {
-    width: 70%;
+    position: relative;
+    width: 54%;
   }
 
   @include vp-desk {
@@ -39,6 +39,12 @@
     margin-right: 4px;
     left: -7px;
   }
+
+  @include vp-tab {
+    position: absolute;
+    top: 27%;
+    left: 138%;
+  }
 }
 
 
@@ -53,6 +59,11 @@
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
+
+  @include vp-tab {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .program__text {
@@ -74,6 +85,12 @@
       background: $color-gainsboro;
     }
   }
+
+  @include vp-tab {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 31px;
+  }
 }
 
 .program__link {
@@ -82,11 +99,20 @@
   font-size: 16px;
   line-height: 16px;
 
+  @include vp-tab {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &::after {
     content: "";
     margin-left: 15px;
     width: 24px;
     height: 12px;
     background: url("../img/deco/arrow.svg") no-repeat;
+
+    @include vp-tab {
+      margin-left: 26px;
+    }
   }
 }

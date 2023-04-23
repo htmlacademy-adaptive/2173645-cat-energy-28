@@ -2,6 +2,11 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+
+  @include vp-tab {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .title--primary {

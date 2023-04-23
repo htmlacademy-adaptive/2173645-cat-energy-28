@@ -4,7 +4,10 @@
   line-height: 20px;
 
   @include vp-tab {
+    max-width: 70%;
     font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
@@ -87,12 +90,18 @@
 
   @include vp-tab {
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+    column-gap: 37px;
+    row-gap: 10px;
   }
 }
 
 .nav--closed .nav__list {
   display: none;
+
+  @include vp-tab {
+    display: flex;
+  }
 }
 
 .nav--nojs {
@@ -125,5 +134,24 @@
 }
 
 .nav__link {
+  position: relative;
   padding: 21px 22px 24px;
+
+  @include vp-tab {
+    padding: 10px 0;
+  }
+}
+
+.nav__link--current {
+  @include vp-tab {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: $color-apple;
+    }
+  }
 }

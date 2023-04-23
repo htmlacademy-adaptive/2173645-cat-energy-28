@@ -1,6 +1,10 @@
 .footer {
   padding: 40px 0;
   background-color: $color-white-smoke;
+
+  @include vp-tab {
+    padding: 43px 0;
+  }
 }
 
 .footer .container {
@@ -10,8 +14,14 @@
   gap: 17px;
 
   @include vp-tab {
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.footer__logo-img {
+  @include vp-tab {
+    width: 143px;
   }
 }
 
@@ -45,13 +55,22 @@
   }
 }
 
+.footer__copyright {
+  @include vp-tab {
+    justify-self: end;
+  }
+}
+
 .footer__logo-academy {
   display: flex;
   align-items: center;
-  width: 100%;
   font-family: $ff-lato;
   line-height: 19px;
   color: $color-charcoal;
+
+  @include vp-tab {
+    width: 168px;
+  }
 }
 
 .footer__logo-academy-text {
