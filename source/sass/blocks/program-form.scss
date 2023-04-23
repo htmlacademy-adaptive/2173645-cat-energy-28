@@ -1,5 +1,9 @@
 .program-form {
   padding: 27px 0 32px 0;
+
+  @include vp-tab {
+    padding: 53px 0 72px 0;
+  }
 }
 
 .program-form .container {
@@ -9,8 +13,11 @@
 }
 
 .program-form__title {
-  margin: 0;
-  margin-bottom: 37px;
+  margin: 0 0 37px;
+
+  @include vp-tab {
+    margin: 0 0 57px;
+  }
 }
 
 .program-form__subtitle {
@@ -20,6 +27,9 @@
   line-height: 18px;
 
   @include vp-tab {
-    margin: 0 0 66px 0;
+    max-width: 330px;
+    margin: 0 0 60px 0;
+    font-size: 20px;
+    line-height: 30px;
   }
 }

@@ -4,6 +4,11 @@
   gap: 24px;
   padding: 0 0 26px 0;
 
+  @include vp-tab {
+    gap: 70px;
+    padding: 0 0 70px 0;
+  }
+
   @include vp-desk {
     flex-direction: row;
     gap: 80px;
@@ -22,6 +27,10 @@
 
   &--row {
     padding: 0 0 16px 0;
+
+    @include vp-tab {
+      padding: 0 0 56px 0;
+    }
 
     @include vp-desk {
       flex-direction: row;
@@ -63,11 +72,20 @@
 
   &--small-gap {
     gap: 11px;
+
+    @include vp-tab {
+      gap: 20px;
+    }
   }
 }
 
 .form__label {
   color: $color-charcoal;
+
+  @include vp-tab {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__label--primary {
@@ -92,6 +110,11 @@
   &--small-padd {
     padding: 14px 38px 13px 14px;
   }
+
+  @include vp-tab {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__field[type="radio"]:checked + .form__control-mark::after {
@@ -103,6 +126,13 @@
   right: 7.5px;
   background: $color-apple;
   border-radius: 50%;
+
+  @include vp-tab {
+    width: 18px;
+    height: 18px;
+    top: 10px;
+    right: 10px;
+  }
 }
 
 .form__field[type="checkbox"]:checked + .form__control-mark::after {
@@ -112,7 +142,12 @@
   height: 14px;
   top: 7px;
   right: 5px;
-  background: url("../img/deco/checkbox.svg");
+  background: url("../img/deco/checkbox.svg") center no-repeat;
+
+  @include vp-tab {
+    width: 24px;
+    height: 19px;
+  }
 }
 
 .form__icon {
@@ -125,6 +160,10 @@
   display: flex;
   align-items: center;
   padding-left: 45px;
+
+  @include vp-tab {
+    padding-left: 60px;
+  }
 }
 
 .form__control-mark {
@@ -142,6 +181,11 @@
   &--rectangle {
     border: solid 1px #cdcdcd;
   }
+
+  @include vp-tab {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .form__list {
@@ -158,6 +202,7 @@
       display: grid;
       grid-template-columns: repeat(2, max-content);
       column-gap: 123px;
+      row-gap: 41px;
     }
 
     @include vp-desk {
@@ -165,6 +210,18 @@
       flex-direction: row;
       gap: 136px;
     }
+  }
+
+  &--border {
+    @include vp-tab {
+      border: 1px solid #e7e7e7;
+    }
+  }
+}
+
+.form__list--padd {
+  @include vp-tab {
+    padding: 28px;
   }
 }
 
@@ -194,6 +251,27 @@
   &--width {
     max-width: 205px;
   }
+
+  @include vp-tab {
+    margin: 0 0 62px -40px;
+    padding: 5px 40px 0 40px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &--margin {
+      margin-bottom: 51px;
+    }
+
+    &--width {
+      max-width: 100%;
+    }
+
+    &::after {
+      top: 27px;
+      left: -70px;
+      width: calc(100% + 140px);
+    }
+  }
 }
 
 .form__textarea {
@@ -201,6 +279,14 @@
   padding: 7px 14px 12px;
   font: inherit;
   color: $color-charcoal;
+
+  @include vp-tab {
+    height: 174px;
+    margin: 0 0 62px;
+    padding: 9px 19px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__text {
@@ -209,6 +295,10 @@
   font-size: 14px;
   line-height: 16px;
   text-align: center;
+
+  @include vp-tab {
+    font-size: 16px;
+  }
 }
 
 .form__inner {
@@ -221,11 +311,18 @@
   @include vp-tab {
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     gap: 64px;
+    margin-top: 59px;
   }
 }
 
 .form__button {
   font-size: 16px;
   line-height: 20px;
+
+  @include vp-tab {
+    padding: 16px 64px;
+    font-size: 20px;
+  }
 }
