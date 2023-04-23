@@ -1,5 +1,9 @@
 .additional-products {
   padding: 20px 0 35px 0;
+
+  @include vp-tab {
+    padding: 20px 0 75px 0;
+  }
 }
 
 
@@ -25,6 +29,20 @@
     width: calc(100% + 20px);
     height: 2px;
     background: $color-apple;
+
+    // без понятия как сделать чтоб он нормально тянулся и прокрутка не появлялась
+    @include vp-tab {
+      top: 22px;
+      left: -30px;
+      width: calc(100% + 60px);
+    }
+  }
+
+  @include vp-tab {
+    margin: 0 0 80px;
+    padding: 0 37px;
+    font-size: 36px;
+    line-height: 36px;
   }
 }
 
@@ -43,7 +61,14 @@
   justify-content: center;
   flex-grow: 1;
   gap: 19px;
-  padding-bottom: 56px;
+  margin-bottom: 56px;
+
+  @include vp-tab {
+    gap: 0;
+    margin-bottom: 70px;
+    border-left: solid 1px #ebebeb;
+    border-right: solid 1px #ebebeb;
+  }
 }
 
 .additional-products__list-item {
@@ -63,16 +88,23 @@
     background: #ebebeb;
   }
 
-  &:last-child {
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -20px;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background: #ebebeb;
+  &:last-child::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ebebeb;
+
+    @include vp-tab {
+      bottom: 0;
     }
+  }
+
+  @include vp-tab {
+    padding: 26px 38px 27px;
+    gap: 13px;
   }
 
   @include vp-desk {
@@ -99,6 +131,11 @@
   line-height: 16px;
   font-weight: 400;
   color: $color-nero;
+
+  @include vp-tab {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .additional-products__inner {
@@ -111,6 +148,8 @@
 
   @include vp-tab {
     gap: 49px;
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
@@ -131,6 +170,7 @@
   @include vp-tab {
     flex-direction: row;
     justify-content: space-between;
+    padding: 53px 124px 55px 79px;
   }
 
   @include vp-desk {
@@ -146,6 +186,7 @@
   @include vp-tab {
     width: 161px;
     text-align: left;
+    line-height: 20px;
   }
 
   @include vp-desk {

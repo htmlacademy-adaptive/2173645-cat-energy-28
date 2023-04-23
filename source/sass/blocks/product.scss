@@ -35,14 +35,20 @@
   @include vp-tab {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    // что-то с этим сделать
-    min-height: 511px;
+    padding: 234px 36px 39px;
+    background: $color-white-smoke;
   }
 }
 
 .product__link {
   justify-self: center;
+
+  &--img {
+    @include vp-tab {
+      position: absolute;
+      top: 0;
+    }
+  }
 }
 
 .product__title {
@@ -52,11 +58,22 @@
   font-weight: 400;
   color: $color-nero;
 
+  @include vp-tab {
+    max-width: 170px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+
   &--primary {
     max-width: 100%;
     margin: 30px 0 0;
     text-align: center;
     color: $color-black;
+
+    @include vp-tab {
+      line-height: 22px;
+    }
   }
 }
 
@@ -67,13 +84,13 @@
   font-size: 12px;
   line-height: 16px;
   color: $color-charcoal;
+
+  @include vp-tab {
+    font-size: 16px;
+  }
 }
 
 .product__description {
-  font-family: $ff-lato;
-  font-size: 12px;
-  line-height: 16px;
-
   &--center {
     margin: 0;
     text-align: center;
