@@ -126,6 +126,11 @@
   font-size: 16px;
   line-height: 16px;
 
+  // Не получилось сделать так чтоб стрелка увеличивалась при ховере и активации
+  &:active {
+    opacity: 0.3;
+  }
+
   @include vp-tab {
     font-size: 20px;
     line-height: 30px;

@@ -37,6 +37,18 @@
   justify-content: space-between;
   width: 190px;
 
+  &--current {
+    pointer-events: none;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @include vp-tab {
     justify-content: flex-start;
     width: 174px;

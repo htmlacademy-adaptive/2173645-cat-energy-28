@@ -23,6 +23,20 @@
   }
 }
 
+.footer__logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &--current {
+    pointer-events: none;
+  }
+}
+
 .footer__logo-img {
   @include vp-tab {
     width: 143px;

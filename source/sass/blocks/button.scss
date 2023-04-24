@@ -9,9 +9,25 @@
   background-color: $color-apple;
   color: $color-default-white;
   border: 0;
+
+  &:hover {
+    background: #5eaa2f;
+  }
+  // Я правильно понял, что прозрачным должен становиться только текст? Тогда не знаю, как сделать
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .button--primary {
   background-color: $color-white-smoke;
   color: $color-charcoal;
+
+  &:hover {
+    background: #ebebeb;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

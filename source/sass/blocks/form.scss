@@ -106,6 +106,22 @@
   color: $color-charcoal;
   border: 1px solid #e7e7e7;
 
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:not(:placeholder-shown):focus {
+    outline: 2px solid $color-charcoal;
+  }
+
+  &--invalid {
+    outline: 2px solid #ff8282;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
   &:focus ~ .form__control-mark--circle {
     border: solid 1px #bababa;
   }
@@ -118,6 +134,10 @@
     font-size: 20px;
     line-height: 30px;
   }
+}
+
+.form__field[type="radio"]:disabled ~ span {
+  opacity: 0.3;
 }
 
 .form__field[type="radio"]:checked + .form__control-mark::after {
