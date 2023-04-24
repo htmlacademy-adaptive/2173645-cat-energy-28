@@ -162,12 +162,6 @@
     font-size: 20px;
     line-height: 30px;
   }
-
-  &--primary {
-    @include vp-desk {;
-      color: $color-default-white;
-    }
-  }
 }
 
 .nav__link--current {
@@ -182,8 +176,12 @@
       background: $color-apple;
     }
   }
+}
 
+.nav__link--primary {
   @include vp-desk {
+    color: $color-default-white;
+
     &::after {
       background: $color-default-white;
     }

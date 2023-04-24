@@ -2,7 +2,7 @@
   padding: 20px 0 35px 0;
 
   @include vp-tab {
-    padding: 20px 0 75px 0;
+    padding: 20px 0 86px 0;
   }
 }
 
@@ -36,6 +36,12 @@
       left: -30px;
       width: calc(100% + 60px);
     }
+
+    @include vp-desk {
+      top: 22px;
+      left: -200px;
+      width: calc(100% + 310px);
+    }
   }
 
   @include vp-tab {
@@ -43,6 +49,10 @@
     padding: 0 37px;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @include vp-desk {
+    margin: 0 0 80px -37px;
   }
 }
 
@@ -65,9 +75,15 @@
 
   @include vp-tab {
     gap: 0;
-    margin-bottom: 70px;
+    margin-bottom: 68px;
     border-left: solid 1px #ebebeb;
     border-right: solid 1px #ebebeb;
+  }
+
+  @include vp-desk {
+    width: 80%;
+    margin: 0;
+    border: 0;
   }
 }
 
@@ -109,6 +125,8 @@
 
   @include vp-desk {
     flex-direction: row;
+    align-items: center;
+    padding: 16px 0;
     gap: 40px;
   }
 }
@@ -136,7 +154,16 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  @include vp-desk {
+    margin: 0;
+  }
 }
+
+.additional-products__package {
+  width: 200px;
+}
+
 
 .additional-products__inner {
   display: flex;
@@ -174,7 +201,9 @@
   }
 
   @include vp-desk {
+    width: 20%;
     flex-direction: column;
+    padding: 55px 42px 26px;
   }
 }
 
