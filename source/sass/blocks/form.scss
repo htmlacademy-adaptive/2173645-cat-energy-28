@@ -12,6 +12,7 @@
   @include vp-desk {
     flex-direction: row;
     gap: 80px;
+    padding: 0 0 60px 0;
   }
 }
 
@@ -33,8 +34,10 @@
     }
 
     @include vp-desk {
-      flex-direction: row;
-      gap: 80px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 76px;
+      padding: 0 0 61px 0;
     }
   }
 }
@@ -206,6 +209,7 @@
     }
 
     @include vp-desk {
+      // Не знаю каким образом поставить элементы, как по макету. Только если задать им ширину.
       display: flex;
       flex-direction: row;
       gap: 136px;
@@ -223,11 +227,19 @@
   @include vp-tab {
     padding: 28px;
   }
+
+  @include vp-desk {
+    padding: 34px 25px 31px;
+  }
 }
 
 .form__legend-wrapper {
   position: relative;
   display: flex;
+
+  @include vp-desk {
+    grid-column: -1 / 1;
+  }
 }
 
 .form__legend {
@@ -270,6 +282,13 @@
       top: 27px;
       left: -70px;
       width: calc(100% + 140px);
+    }
+  }
+  // Знаю, что это не правильно, но как правильно - не знаю)
+  @include vp-desk {
+    &::after {
+      left: -110px;
+      width: calc(100% + 220px);
     }
   }
 }
@@ -315,6 +334,11 @@
     gap: 64px;
     margin-top: 59px;
   }
+
+  @include vp-desk {
+    margin-top: 65px;
+    gap: 80px;
+  }
 }
 
 .form__button {
@@ -324,5 +348,9 @@
   @include vp-tab {
     padding: 16px 64px;
     font-size: 20px;
+  }
+
+  @include vp-desk {
+    width: 569px;
   }
 }

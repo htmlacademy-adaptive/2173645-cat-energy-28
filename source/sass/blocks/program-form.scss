@@ -4,11 +4,9 @@
   @include vp-tab {
     padding: 53px 0 72px 0;
   }
-}
 
-.program-form .container {
-  @include vp-tab {
-    padding: 0 70px;
+  @include vp-desk {
+    padding: 43px 0 82px 0;
   }
 }
 
