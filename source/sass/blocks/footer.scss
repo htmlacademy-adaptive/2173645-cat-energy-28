@@ -5,6 +5,10 @@
   @include vp-tab {
     padding: 43px 0;
   }
+
+  @include vp-desk {
+    padding: 53px 0;
+  }
 }
 
 .footer .container {

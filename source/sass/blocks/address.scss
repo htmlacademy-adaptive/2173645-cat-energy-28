@@ -8,8 +8,9 @@
   }
 
   @include vp-desk {
-    max-width: 560px;
-    padding: 56px 60px 56px 80px;
+    max-width: 565px;
+    padding: 56px 75px 63px 80px;
+    background: $color-default-white;
   }
 }
 

@@ -15,6 +15,14 @@
       background: $color-gainsboro;
     }
   }
+
+  @include vp-desk {
+    padding: 61px 0 49px 0;
+
+    &::after {
+      height: 0;
+    }
+  }
 }
 
 .advantages__list {
@@ -29,7 +37,7 @@
 
   @include vp-desk {
     grid-template-columns: repeat(4, 1fr);
-    gap: 37px 150px;
+    gap: 37px 65px;
   }
 }
 
@@ -74,6 +82,10 @@
       right: 5px;
       background: url("../img/deco/4.svg") no-repeat center;
     }
+  }
+
+  @include vp-desk {
+    width: 260px;
   }
 }
 

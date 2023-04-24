@@ -8,16 +8,7 @@
   }
 
   @include vp-desk {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: -1;
-      width: 720px;
-      height: 694px;
-      background: url("../img/deco/cat-background-desk.jpg") no-repeat;
-    }
+    padding: 80px 0 0 0;
   }
 }
 
@@ -34,8 +25,9 @@
   }
 
   @include vp-desk {
-    max-width: 414px;
-    min-height: 457px;
+    max-width: 420px;
+    margin: 0 0 0 80px;
+    min-height: 532px;
   }
 }
 
@@ -78,6 +70,13 @@
     width: 709px;
     height: 609px;
     pointer-events: none;
+  }
+
+  @include vp-desk {
+    top: -82px;
+    left: 385px;
+    width: 552px;
+    height: 499px;
   }
 }
 

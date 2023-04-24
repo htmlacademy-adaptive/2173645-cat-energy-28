@@ -41,4 +41,9 @@
     justify-content: flex-start;
     width: 174px;
   }
+
+  @include vp-desk {
+    width: 202px;
+    height: 59px;
+  }
 }

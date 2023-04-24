@@ -9,6 +9,21 @@
     font-size: 18px;
     line-height: 24px;
   }
+
+  @include vp-desk {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -68px;
+      right: -110px;
+      z-index: -1;
+      width: 720px;
+      height: 694px;
+      background: url("../img/deco/cat-background-desk.jpg") no-repeat;
+    }
+  }
 }
 
 .nav__toggle {
@@ -140,6 +155,12 @@
   @include vp-tab {
     padding: 10px 0;
   }
+
+  @include vp-desk {
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-default-white;
+  }
 }
 
 .nav__link--current {
@@ -152,6 +173,12 @@
       width: 100%;
       height: 2px;
       background: $color-apple;
+    }
+  }
+
+  @include vp-desk {
+    &::after {
+      background: $color-default-white;
     }
   }
 }

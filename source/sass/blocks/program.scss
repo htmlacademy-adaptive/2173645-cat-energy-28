@@ -9,8 +9,9 @@
   }
 
   @include vp-desk {
-    min-width: 570px;
+    width: 570px;
     min-height: 374px;
+    padding: 40px 28px 57px 53px;
   }
 }
 
@@ -33,17 +34,34 @@
   &--primary {
     left: 3px;
     margin-right: 20px;
+
+    @include vp-desk {
+      width: 100px;
+      height: 106px;
+      margin-right: 60px;
+    }
   }
 
   &--secondary {
-    margin-right: 4px;
+    margin: 5px 4px 0 0;
     left: -7px;
+
+    @include vp-desk {
+      width: 134px;
+      height: 100px;
+      margin-right: 47px;
+      margin-left: -20px;
+    }
   }
 
   @include vp-tab {
     position: absolute;
     top: 27%;
     left: 138%;
+  }
+
+  @include vp-desk {
+    position: static;
   }
 }
 
@@ -52,6 +70,10 @@
   display: flex;
   align-items: center;
   margin: 0 0 22px;
+
+  @include vp-desk {
+    margin: 0 0 40px;
+  }
 }
 
 .program__title {
@@ -90,6 +112,11 @@
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 31px;
+  }
+
+  @include vp-desk {
+    margin-bottom: 0;
+    padding-bottom: 27px;
   }
 }
 
