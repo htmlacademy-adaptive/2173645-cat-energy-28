@@ -4,3 +4,14 @@
   flex-wrap: wrap;
   gap: 24px;
 }
+
+.socials__link {
+  &:hover {
+    fill: $color-apple;
+  }
+
+  &:active {
+    opacity: 0.3;
+    fill: $color-apple;
+  }
+}

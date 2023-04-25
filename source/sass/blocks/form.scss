@@ -114,15 +114,23 @@
     outline: 2px solid $color-charcoal;
   }
 
+  &:not(:placeholder-shown):focus ~ .form__icon {
+    stroke: $color-apple;
+  }
+
   &--invalid {
     outline: 2px solid #ff8282;
+  }
+
+  &--invalid ~ .form__icon {
+    stroke: #ff8282;
   }
 
   &:disabled {
     opacity: 0.3;
   }
 
-  &:focus ~ .form__control-mark--circle {
+  &:focus ~ .form__control-mark {
     border: solid 1px #bababa;
   }
 
@@ -158,6 +166,10 @@
   }
 }
 
+.form__field[type="checkbox"]:disabled ~ span {
+  opacity: 0.3;
+}
+
 .form__field[type="checkbox"]:checked + .form__control-mark::after {
   content: "";
   position: absolute;
@@ -176,6 +188,7 @@
 .form__icon {
   position: absolute;
   right: 16px;
+  stroke: $color-default-black;
 }
 
 .form__control {

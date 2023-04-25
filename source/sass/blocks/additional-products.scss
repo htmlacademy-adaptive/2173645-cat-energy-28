@@ -192,7 +192,7 @@
   align-items: center;
   gap: 35px;
   padding: 59px 43px 30px;
-  background: $color-apple url("../../img/deco/cat-bag.jpg") center/cover no-repeat;
+  background: $color-apple url("../img/deco/cat-bag.jpg") center/cover no-repeat;
 
   @include vp-tab {
     flex-direction: row;

@@ -86,6 +86,15 @@
   line-height: 19px;
   color: $color-charcoal;
 
+  &:hover {
+    fill: $color-apple;
+  }
+
+  &:active {
+    opacity: 0.3;
+    fill: $color-apple;
+  }
+
   @include vp-tab {
     width: 168px;
   }

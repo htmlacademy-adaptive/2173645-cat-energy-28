@@ -210,8 +210,24 @@
   z-index: 4;
   width: 40px;
   height: 40px;
-  background: url("../img/deco/control.svg");
+  background: initial;
   border: 0;
+
+  &:hover rect {
+    stroke: $color-apple;
+  }
+
+  &:hover path {
+    fill: $color-apple;
+  }
+
+  &:hover::before {
+    background: $color-apple;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @include vp-tab {
     top: 236px !important;
@@ -232,5 +248,20 @@
       top: -236px;
       height: 512px;
     }
+  }
+}
+
+.results__slider__svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+
+  & path {
+    fill: #666666;
+  }
+
+  & rect {
+    stroke: #666666;
   }
 }
