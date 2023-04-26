@@ -1030,8 +1030,20 @@ img {
   z-index: 4;
   width: 40px;
   height: 40px;
-  background: url("../img/deco/control.svg");
+  background: initial;
   border: 0;
+}
+.results__slider-control:hover rect {
+  stroke: #68b738;
+}
+.results__slider-control:hover path {
+  fill: #68b738;
+}
+.results__slider-control:hover::before {
+  background: #68b738;
+}
+.results__slider-control:active {
+  opacity: 0.6;
 }
 @media (min-width: 768px) {
   .results__slider-control {
@@ -1054,6 +1066,19 @@ img {
     top: -236px;
     height: 512px;
   }
+}
+
+.results__slider__svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+}
+.results__slider__svg path {
+  fill: #666666;
+}
+.results__slider__svg rect {
+  stroke: #666666;
 }
 
 .address-info {
@@ -1232,6 +1257,13 @@ img {
   line-height: 19px;
   color: #444444;
 }
+.footer__logo-academy:hover {
+  fill: #68b738;
+}
+.footer__logo-academy:active {
+  opacity: 0.3;
+  fill: #68b738;
+}
 @media (min-width: 768px) {
   .footer__logo-academy {
     width: 168px;
@@ -1254,6 +1286,14 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+}
+
+.socials__link:hover {
+  fill: #68b738;
+}
+.socials__link:active {
+  opacity: 0.3;
+  fill: #68b738;
 }
 
 .catalog {
@@ -1705,7 +1745,7 @@ img {
   align-items: center;
   gap: 35px;
   padding: 59px 43px 30px;
-  background: #68b738 url("../../img/deco/cat-bag.jpg") center/cover no-repeat;
+  background: #68b738 url("../img/deco/cat-bag.jpg") center/cover no-repeat;
 }
 @media (min-width: 768px) {
   .additional-products__promotion {
@@ -1893,13 +1933,19 @@ img {
 .form__field:not(:placeholder-shown):focus {
   outline: 2px solid #444444;
 }
+.form__field:not(:placeholder-shown):focus ~ .form__icon {
+  stroke: #68b738;
+}
 .form__field--invalid {
   outline: 2px solid #ff8282;
+}
+.form__field--invalid ~ .form__icon {
+  stroke: #ff8282;
 }
 .form__field:disabled {
   opacity: 0.3;
 }
-.form__field:focus ~ .form__control-mark--circle {
+.form__field:focus ~ .form__control-mark {
   border: solid 1px #bababa;
 }
 .form__field--small-padd {
@@ -1935,6 +1981,10 @@ img {
   }
 }
 
+.form__field[type=checkbox]:disabled ~ span {
+  opacity: 0.3;
+}
+
 .form__field[type=checkbox]:checked + .form__control-mark::after {
   content: "";
   position: absolute;
@@ -1954,6 +2004,7 @@ img {
 .form__icon {
   position: absolute;
   right: 16px;
+  stroke: #000000;
 }
 
 .form__control {
