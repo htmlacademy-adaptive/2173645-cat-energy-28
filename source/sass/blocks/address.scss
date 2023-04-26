@@ -3,20 +3,28 @@
   justify-content: space-between;
   padding: 26px 0;
 
+  @include vp-tab {
+    padding: 61px 41px;
+  }
+
   @include vp-desk {
-    max-width: 560px;
-    padding: 56px 60px 56px 80px;
+    max-width: 565px;
+    padding: 56px 75px 63px 80px;
+    background: $color-default-white;
   }
 }
 
 .address__subtitle {
   width: 139px;
   margin: 0;
+  font-size: 16px;
   line-height: 20px;
   color: $color-black;
 
   @include vp-tab {
     width: 172px;
+    font-size: 20px;
+    line-height: 26px;
   }
 }
 
@@ -30,11 +38,11 @@
 
   @include vp-tab {
     width: 160px;
+    font-size: 16px;
     text-align: right;
   }
 
   @include vp-desk {
     text-align: left;
   }
-
 }

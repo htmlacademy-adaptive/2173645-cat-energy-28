@@ -1,23 +1,32 @@
 .results {
-  padding: 25px 0 40px 0;
+  padding: 25px 0 40px;
   background-color: $color-white-smoke;
 
   @include vp-tab {
+    padding: 29px 0 100px;
     background-color: $color-default-white;
+  }
+
+  @include vp-desk {
+    padding: 9px 0 0;
   }
 }
 
 .results__wrapper {
   display: flex;
   flex-direction: column;
+  padding: 0 0 20px;
+
+  @include vp-tab {
+    margin: 0 0 69px 0;
+  }
 
   @include vp-desk {
-    display: flex;
-    flex-direction: column;
-    width: 436px;
+    width: 440px;
+    margin: 0 0 54px 0;
   }
 }
-// Сомневаюсь, что хорошая идея делать так с контейнером. Нужна доп обертка? я так же сделал хедеру.
+
 .results .container {
   display: flex;
   flex-direction: column;
@@ -25,6 +34,7 @@
 
   @include vp-desk {
     flex-direction: row;
+    gap: 220px;
   }
 }
 
@@ -32,7 +42,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 18px;
 
   @include vp-tab {
     justify-content: space-between;
@@ -40,65 +50,218 @@
 
   @include vp-desk {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 47px;
   }
 }
 
 .results__terms-inner {
+  position: relative;
   display: flex;
   flex-direction: column-reverse;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 20px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+
+  @include vp-tab {
+    padding: 16px 30px;
+  }
 }
 
 .results__title {
-  margin: 0;
-  margin-bottom: 40px;
+  margin: 0 0 44px;
+
+  @include vp-tab {
+    margin: 0 0 63px;
+  }
+
+  @include vp-desk {
+    margin: 0 0 145px;
+  }
 }
 
 .results__description {
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 0 0 4px;
   font-family: $ff-lato;
   font-size: 14px;
   line-height: 18px;
   color: $color-charcoal;
+
+  @include vp-tab {
+    margin: 0 0 38px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @include vp-desk {
+    margin: 0 0 52px;
+  }
 }
 
 .results__terms {
-  display: flex;
-  gap: 42px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 33px;
+
+  @include vp-tab {
+    gap: 40px;
+  }
+
+  @include vp-desk {
+    gap: 38px;
+  }
 }
 
 .results__terms-desc {
+  margin: 0;
   font-size: 24px;
   line-height: 24px;
+
+  @include vp-tab {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .results__terms-term {
+  position: absolute;
+  bottom: -16px;
+  max-width: 80px;
   font-family: $ff-lato;
   font-size: 12px;
   line-height: 12px;
   color: $color-charcoal;
+  text-align: center;
+  background-color: $color-white-smoke;
+
+  @include vp-tab {
+    bottom: -7px;
+    max-width: 150px;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 14px;
+    background: $color-default-white;
+  }
 }
 
 .results__text-wrapper {
   @include vp-tab {
     display: flex;
     flex-direction: column;
+    align-self: center;
+    gap: 6px;
   }
 
-  @include vp-tab {
+  @include vp-desk {
     flex-direction: row;
-    gap: 20px;
+    gap: 66px;
+    align-self: flex-start;
   }
 }
 
 .results__text {
   font-size: 14px;
   line-height: 20px;
+
+  @include vp-tab {
+    font-size: 20px;
+    text-align: right;
+  }
 }
 
-.results__slider-images {
-  display: flex;
-  justify-content: center;
-  // Временно пока норм слайдер не сделали
-  flex-wrap: wrap;
+.results__slider {
+  position: relative;
+  width: 280px;
+  height: 256px;
+  margin: 0 auto;
+
+  @include vp-tab {
+    // как сделать фон серый я так и не понял, псевдо?
+    width: 560px;
+    height: 512px;
+  }
+}
+
+// Изначально не заметил серый фон и сделал jpg, как сделать адеватно с png - не знаю
+
+.results__slider-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+
+  &--overlay {
+    z-index: 2;
+  }
+}
+
+.results__img {
+  @include vp-tab {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+// Не удалось сделать линию за кнопкой
+.results__slider-control {
+  position: absolute;
+  z-index: 4;
+  width: 40px;
+  height: 40px;
+  background: initial;
+  border: 0;
+
+  &:hover rect {
+    stroke: $color-apple;
+  }
+
+  &:hover path {
+    fill: $color-apple;
+  }
+
+  &:hover::before {
+    background: $color-apple;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @include vp-tab {
+    top: 236px !important;
+    right: 259px !important;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -108px;
+    right: 18px;
+    z-index: 3;
+    width: 4px;
+    height: 256px;
+    background: #666666;
+
+    @include vp-tab {
+      top: -236px;
+      height: 512px;
+    }
+  }
+}
+
+.results__slider__svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+
+  & path {
+    fill: #666666;
+  }
+
+  & rect {
+    stroke: #666666;
+  }
 }

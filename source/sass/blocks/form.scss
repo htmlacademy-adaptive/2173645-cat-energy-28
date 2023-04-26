@@ -4,38 +4,91 @@
   gap: 24px;
   padding: 0 0 26px 0;
 
+  @include vp-tab {
+    gap: 70px;
+    padding: 0 0 70px 0;
+  }
+
   @include vp-desk {
     flex-direction: row;
     gap: 80px;
+    padding: 0 0 60px 0;
   }
 }
 
 .form__fieldset {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  gap: 14px;
+  gap: 12px;
   margin: 0;
   padding: 0;
   border: 0;
 
   &--row {
+    padding: 0 0 16px 0;
+
+    @include vp-tab {
+      padding: 0 0 56px 0;
+    }
+
     @include vp-desk {
-      flex-direction: row;
-      gap: 80px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 76px;
+      padding: 0 0 61px 0;
+    }
+  }
+}
+
+.form__fieldset--secondary {
+  @include vp-mob {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -20px;
+      width: 100vw;
+      height: 1px;
+      background: $color-gainsboro;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      left: -20px;
+      width: 100vw;
+      height: 1px;
+      background: $color-gainsboro;
     }
   }
 }
 
 .form__group {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 13px;
   flex-grow: 1;
+
+  &--small-gap {
+    gap: 11px;
+
+    @include vp-tab {
+      gap: 20px;
+    }
+  }
 }
 
 .form__label {
   color: $color-charcoal;
+
+  @include vp-tab {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__label--primary {
@@ -48,18 +101,135 @@
 
 .form__field {
   flex-grow: 1;
-  padding: 14px 20px 13px;
+  padding: 14px 16px 13px 20px;
   font: inherit;
   color: $color-charcoal;
   border: 1px solid #e7e7e7;
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:not(:placeholder-shown):focus {
+    outline: 2px solid $color-charcoal;
+  }
+
+  &:not(:placeholder-shown):focus ~ .form__icon {
+    stroke: $color-apple;
+  }
+
+  &--invalid {
+    outline: 2px solid #ff8282;
+  }
+
+  &--invalid ~ .form__icon {
+    stroke: #ff8282;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  &:focus ~ .form__control-mark {
+    border: solid 1px #bababa;
+  }
+
+  &--small-padd {
+    padding: 14px 38px 13px 14px;
+  }
+
+  @include vp-tab {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form__field[type="radio"]:disabled ~ span {
+  opacity: 0.3;
+}
+
+.form__field[type="radio"]:checked + .form__control-mark::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  top: 6.5px;
+  right: 7.5px;
+  background: $color-apple;
+  border-radius: 50%;
+
+  @include vp-tab {
+    width: 18px;
+    height: 18px;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.form__field[type="checkbox"]:disabled ~ span {
+  opacity: 0.3;
+}
+
+.form__field[type="checkbox"]:checked + .form__control-mark::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 14px;
+  top: 7px;
+  right: 5px;
+  background: url("../img/deco/checkbox.svg") center no-repeat;
+
+  @include vp-tab {
+    width: 24px;
+    height: 19px;
+  }
+}
+
+.form__icon {
+  position: absolute;
+  right: 16px;
+  stroke: $color-default-black;
+}
+
+.form__control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 45px;
+
+  @include vp-tab {
+    padding-left: 60px;
+  }
+}
+
+.form__control-mark {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+
+  &--circle {
+    border: solid 1px #cdcdcd;
+    border-radius: 50%;
+  }
+
+  &--rectangle {
+    border: solid 1px #cdcdcd;
+  }
+
+  @include vp-tab {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .form__list {
   @include list-reset;
   display: flex;
   flex-direction: column;
-  gap: 13px;
-  padding: 22px 0 19px 0;
+  gap: 24px;
+  padding: 28px 0 19px 0;
 
   &--primary {
     padding: 0;
@@ -68,26 +238,107 @@
       display: grid;
       grid-template-columns: repeat(2, max-content);
       column-gap: 123px;
+      row-gap: 41px;
     }
 
     @include vp-desk {
+      // Не знаю каким образом поставить элементы, как по макету. Только если задать им ширину.
       display: flex;
       flex-direction: row;
       gap: 136px;
     }
   }
+
+  &--border {
+    @include vp-tab {
+      border: 1px solid #e7e7e7;
+    }
+  }
+}
+
+.form__list--padd {
+  @include vp-tab {
+    padding: 28px;
+  }
+
+  @include vp-desk {
+    padding: 34px 25px 31px;
+  }
+}
+
+.form__legend-wrapper {
+  position: relative;
+  display: flex;
+
+  @include vp-desk {
+    grid-column: -1 / 1;
+  }
 }
 
 .form__legend {
-  margin-bottom: 35px;
-  padding-top: 24px;
+  margin-bottom: 27px;
+  padding: 5px 23px 0 0;
   font-size: 24px;
   line-height: 26px;
+  background-color: $color-default-white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 19px;
+    width: calc(100% + 20px);
+    height: 2px;
+    background: $color-apple;
+  }
+
+  &--width {
+    max-width: 205px;
+  }
+
+  @include vp-tab {
+    margin: 0 0 62px -40px;
+    padding: 5px 40px 0 40px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &--margin {
+      margin-bottom: 51px;
+    }
+
+    &--width {
+      max-width: 100%;
+    }
+
+    &::after {
+      top: 27px;
+      left: -70px;
+      width: calc(100% + 140px);
+    }
+  }
+  // Знаю, что это не правильно, но как правильно - не знаю)
+  @include vp-desk {
+    &::after {
+      left: -110px;
+      width: calc(100% + 220px);
+    }
+  }
 }
 
 .form__textarea {
+  margin: 0 0 20px;
+  padding: 7px 14px 12px;
   font: inherit;
   color: $color-charcoal;
+
+  @include vp-tab {
+    height: 174px;
+    margin: 0 0 62px;
+    padding: 9px 19px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__text {
@@ -96,6 +347,10 @@
   font-size: 14px;
   line-height: 16px;
   text-align: center;
+
+  @include vp-tab {
+    font-size: 16px;
+  }
 }
 
 .form__inner {
@@ -103,11 +358,32 @@
   flex-direction: column;
   justify-content: center;
   gap: 21px;
-  margin-top: 34px;
+  margin-top: 40px;
 
   @include vp-tab {
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     gap: 64px;
+    margin-top: 59px;
+  }
+
+  @include vp-desk {
+    margin-top: 65px;
+    gap: 80px;
+  }
+}
+
+.form__button {
+  font-size: 16px;
+  line-height: 20px;
+
+  @include vp-tab {
+    padding: 16px 64px;
+    font-size: 20px;
+  }
+
+  @include vp-desk {
+    width: 569px;
   }
 }

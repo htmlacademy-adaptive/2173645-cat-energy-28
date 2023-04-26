@@ -1,21 +1,25 @@
 .program {
-  padding: 18px 20px;
+  min-width: 280px;
+  min-height: 266px;
+  padding: 21px;
   background-color: $color-white-smoke;
 
   @include vp-tab {
-    min-width: 708px;
-    min-height: 372px;
+    padding: 77px 28px 57px 53px;
   }
 
   @include vp-desk {
-    min-width: 570px;
+    width: 570px;
     min-height: 374px;
+    padding: 40px 28px 57px 53px;
   }
 }
 
+// что-то с этим сделать
 .program__inner {
   @include vp-tab {
-    width: 70%;
+    position: relative;
+    width: 54%;
   }
 
   @include vp-desk {
@@ -24,21 +28,123 @@
   }
 }
 
+.program__img {
+  position: relative;
+
+  &--primary {
+    left: 3px;
+    margin-right: 20px;
+
+    @include vp-desk {
+      width: 100px;
+      height: 106px;
+      margin-right: 60px;
+    }
+  }
+
+  &--secondary {
+    margin: 5px 4px 0 0;
+    left: -7px;
+
+    @include vp-desk {
+      width: 134px;
+      height: 100px;
+      margin-right: 47px;
+      margin-left: -20px;
+    }
+  }
+
+  @include vp-tab {
+    position: absolute;
+    top: 27%;
+    left: 138%;
+  }
+
+  @include vp-desk {
+    position: static;
+  }
+}
+
+
+.program__title-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 0 0 22px;
+
+  @include vp-desk {
+    margin: 0 0 40px;
+  }
+}
+
 .program__title {
   margin: 0;
-  margin-bottom: 29px;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
+
+  @include vp-tab {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .program__text {
-  margin: 0 0 38px 0;
+  position: relative;
+  margin: 0 0 20px 0;
+  padding-bottom: 23px;
   font-family: $ff-lato;
   font-size: 14px;
   color: $color-charcoal;
+
+  @include vp-mob {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: $color-gainsboro;
+    }
+  }
+
+  @include vp-tab {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 31px;
+  }
+
+  @include vp-desk {
+    margin-bottom: 0;
+    padding-bottom: 27px;
+  }
 }
 
 .program__link {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
   line-height: 16px;
+
+  // Не получилось сделать так чтоб стрелка увеличивалась при ховере и активации
+  &:active {
+    opacity: 0.3;
+  }
+
+  @include vp-tab {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &::after {
+    content: "";
+    margin-left: 15px;
+    width: 24px;
+    height: 12px;
+    background: url("../img/deco/arrow.svg") no-repeat;
+
+    @include vp-tab {
+      margin-left: 26px;
+    }
+  }
 }

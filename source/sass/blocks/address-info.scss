@@ -8,7 +8,7 @@
   @include vp-desk {
     position: relative;
     z-index: 1;
-    padding: 95px 0 107px 0px;
+    padding: 95px 0 107px 0;
   }
 }
 
@@ -17,11 +17,18 @@
   flex-direction: column;
   align-items: center;
 
+  @include vp-tab {
+    height: 400px;
+  }
+
   @include vp-desk {
     position: absolute;
     z-index: -1;
     top: 0;
     width: 100vw;
-
   }
+}
+
+.address-info__iframe {
+  flex-grow: 1;
 }

@@ -1,11 +1,27 @@
 .header {
   position: relative;
-  padding: 10px 0 17px 0;
+  padding: 13px 0 15px 0;
+
+  @include vp-tab {
+    padding: 11px 0 15px 0;
+  }
 
   @include vp-desk {
-    position: absolute;
-    width: 100vw;
     padding: 53px 0 32px 0;
+  }
+}
+
+.header--line {
+  @include vp-mob {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: $color-gainsboro;
+    }
   }
 }
 
@@ -13,6 +29,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .header__logo {
@@ -20,7 +37,25 @@
   justify-content: space-between;
   width: 190px;
 
+  &--current {
+    pointer-events: none;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @include vp-tab {
     justify-content: flex-start;
+    width: 174px;
+  }
+
+  @include vp-desk {
+    width: 202px;
+    height: 59px;
   }
 }

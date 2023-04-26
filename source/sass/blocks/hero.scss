@@ -1,15 +1,14 @@
-// Додумался засунуть фон сюда, но теперь мешает фоновая заливка, без которой никак)
 .hero {
   padding: 27px 0 0 0;
-  background: url("../../img/deco/cat-lick.jpg") top no-repeat;
+  background: url("../img/deco/cat-lick.jpg") top no-repeat;
 
   @include vp-tab {
+    padding: 54px 0 0 0;
     background: initial;
   }
 
   @include vp-desk {
-    background: url("../../img/deco/cat-lick.jpg") top right no-repeat;
-    padding: 223px 0 0 0;
+    padding: 80px 0 0 0;
   }
 }
 
@@ -22,13 +21,13 @@
     position: relative;
     align-items: start;
     margin: 0 0 0 88px;
-    // знаю, что не очень. временное решение, пока с тобой не обсудили.
-    min-height: 972px;
+    min-height: 790px;
   }
 
   @include vp-desk {
-    max-width: 414px;
-    min-height: 457px;
+    max-width: 420px;
+    margin: 0 0 0 80px;
+    min-height: 532px;
   }
 }
 
@@ -39,6 +38,7 @@
   text-align: center;
 
   @include vp-tab {
+    margin-bottom: 40px;
     text-align: left;
   }
 }
@@ -51,6 +51,9 @@
   color: $color-default-white;
 
   @include vp-tab {
+    margin: 0 0 50px 0;
+    font-size: 20px;
+    line-height: 20px;
     color: $color-default-black;
     text-align: left;
   }
@@ -62,5 +65,29 @@
   @include vp-tab {
     position: absolute;
     z-index: -1;
+    bottom: -23px;
+    right: -43px;
+    width: 709px;
+    height: 609px;
+    pointer-events: none;
+  }
+
+  @include vp-desk {
+    top: -82px;
+    left: 385px;
+    width: 552px;
+    height: 499px;
+  }
+}
+
+.hero .hero__button {
+  @include vp-mob {
+    width: 100%;
+  }
+
+  @include vp-tab {
+    padding: 17px 29px;
+    font-size: 20px;
+    line-height: 20px;
   }
 }
