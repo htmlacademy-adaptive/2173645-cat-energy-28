@@ -104,10 +104,10 @@
   padding: 14px 16px 13px 20px;
   font: inherit;
   color: $color-charcoal;
-  border: 1px solid #e7e7e7;
+  border: 1px solid $color-whisper2;
 
   &:hover {
-    border: 1px solid #cdcdcd;
+    border: 1px solid $color-very-light-grey;
   }
 
   &:not(:placeholder-shown):focus {
@@ -119,11 +119,11 @@
   }
 
   &--invalid {
-    outline: 2px solid #ff8282;
+    outline: 2px solid $color-light-coral;
   }
 
   &--invalid ~ .form__icon {
-    stroke: #ff8282;
+    stroke: $color-light-coral;
   }
 
   &:disabled {
@@ -131,7 +131,7 @@
   }
 
   &:focus ~ .form__control-mark {
-    border: solid 1px #bababa;
+    border: solid 1px $color-silver;
   }
 
   &--small-padd {
@@ -207,15 +207,15 @@
   left: 0;
   width: 30px;
   height: 30px;
-  background-color: #ffffff;
+  background-color: $color-default-white;
 
   &--circle {
-    border: solid 1px #cdcdcd;
+    border: solid 1px $color-very-light-grey;
     border-radius: 50%;
   }
 
   &--rectangle {
-    border: solid 1px #cdcdcd;
+    border: solid 1px $color-very-light-grey;
   }
 
   @include vp-tab {
@@ -251,7 +251,7 @@
 
   &--border {
     @include vp-tab {
-      border: 1px solid #e7e7e7;
+      border: 1px solid $color-whisper2;
     }
   }
 }

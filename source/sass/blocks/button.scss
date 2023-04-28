@@ -11,7 +11,7 @@
   border: 0;
 
   &:hover {
-    background: #5eaa2f;
+    background: $color-limeade;
   }
   // Я правильно понял, что прозрачным должен становиться только текст? Тогда не знаю, как сделать
   &:active {
@@ -24,7 +24,7 @@
   color: $color-charcoal;
 
   &:hover {
-    background: #ebebeb;
+    background: $color-whisper;
   }
 
   &:active {

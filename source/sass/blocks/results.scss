@@ -62,7 +62,7 @@
   align-items: center;
   gap: 8px;
   padding: 15px 20px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $color-very-light-grey;
   border-radius: 3px;
 
   @include vp-tab {
@@ -238,7 +238,7 @@
     z-index: 3;
     width: 4px;
     height: 256px;
-    background: #666666;
+    background: $color-dim-gray;
 
     @include vp-tab {
       top: -236px;
@@ -254,10 +254,10 @@
   z-index: 5;
 
   & path {
-    fill: #666666;
+    fill: $color-dim-gray;
   }
 
   & rect {
-    stroke: #666666;
+    stroke: $color-dim-gray;
   }
 }
