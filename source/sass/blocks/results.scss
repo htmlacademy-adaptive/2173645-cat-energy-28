@@ -198,13 +198,9 @@
 }
 
 .results__img {
-  @include vp-tab {
-    width: 560px;
-    height: 512px;
-  }
+  max-width: initial;
 }
 
-// Не удалось сделать линию за кнопкой
 .results__slider-control {
   position: absolute;
   z-index: 4;

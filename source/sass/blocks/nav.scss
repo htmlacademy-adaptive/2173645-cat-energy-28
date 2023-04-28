@@ -11,19 +11,26 @@
   }
 }
 
+
 .nav--back {
   @include vp-desk {
     position: relative;
+  }
+}
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: -68px;
-      right: -110px;
-      z-index: -1;
-      width: 720px;
-      height: 694px;
-      background: url("../img/deco/cat-background-desk.jpg") no-repeat;
+.nav--back::before {
+  @include vp-desk {
+    content: "";
+    position: absolute;
+    top: -68px;
+    right: -110px;
+    z-index: -1;
+    width: 720px;
+    height: 694px;
+    background: url("../img/deco/cat-background-desk.jpg") no-repeat;
+
+    @include dp {
+      background: url("../img/deco/cat-background-desk@2x.jpg") center / cover no-repeat;
     }
   }
 }

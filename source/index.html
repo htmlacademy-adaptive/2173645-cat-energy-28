@@ -16,8 +16,11 @@
   <header class="header">
     <div class="container">
       <a class="header__logo header__logo--current">
-        <img src="img/logos/logo-mobile.svg" width="33" height="38" alt="Логотип сайта Кэт энерджи.">
-        <img src="img/logos/logo-2.svg" width="101" height="18" alt="Логотип сайта Кэт энерджи.">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logos/logo-desktop.svg" width="202" height="59">
+          <source media="(min-width: 768px)" srcset="img/logos/logo-tablet.svg" width="174" height="52">
+          <img src="img/logos/logo-mobile.svg" width="190" height="38" alt="Логотип сайта Кэт энерджи.">
+        </picture>
       </a>
       <nav class="nav nav--closed nav--nojs nav--back">
         <button class="nav__toggle" type="button">
@@ -48,8 +51,11 @@
         <div class="hero__inner">
           <h1 class="hero__title title title--primary">Функциональное <br>питание для котов</h1>
           <p class="hero__description">ЗАНЯЛСЯ СОБОЙ? ЗАЙМИСЬ КОТОМ!</p>
-          <img class="hero__picture" src="img/pictures/cat-energy-chicken-mobile.png" width="280" height="270"
-            alt="Кэт энерджи про со вкусом курицы.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/pictures/cat-energy-chicken-desk.png, img/pictures/cat-energy-chicken-desk@2x.png 2x" width="552" height="499">
+            <source media="(min-width: 768px)" srcset="img/pictures/cat-energy-chicken-tablet.png, img/pictures/cat-energy-chicken-tablet@2x.png 2x" width="709" height="609">
+            <img class="hero__picture" src="img/pictures/cat-energy-chicken-mobile.png" srcset="img/pictures/cat-energy-chicken-mobile@2x.png 2x" width="280" height="270" alt="Кэт энерджи про со вкусом курицы.">
+          </picture>
           <a class="hero__button button" href="form.html">ПОДОБРАТЬ ПРОГРАММУ</a>
         </div>
       </div>
@@ -212,12 +218,16 @@
         </div>
         <div class="results__slider">
           <div class="results__slider-img results__slider-img--overlay" style="width: 50%;">
-            <img class="results__img" src="img/pictures/cat-fat-mobile.png" width="280" height="256"
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/pictures/cat-fat-tablet.png, img/pictures/cat-fat-tablet@2x.png 2x" width="560" height="512">
+              <img class="results__img" src="img/pictures/cat-fat-mobile.png" srcset="img/pictures/cat-fat-mobile@2x.png 2x" width="280" height="256"
               alt="Фотография крупного кота Бориса до замены корма.">
+            </picture>
           </div>
           <button class="results__slider-control" style="top: 108px;
           right: 120px;" type="button">
-            <svg class="results__slider__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="results__slider__svg" width="40" height="40" viewBox="0 0 40 40" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <rect x="1" y="1" width="38" height="38" rx="19" fill="white" />
               <path d="M16 11L8 20L16 29V11Z" fill="curentcolor" />
               <path d="M32 20L24 11V29L32 20Z" fill="curentcolor" />
@@ -226,8 +236,11 @@
             <span class="visually-hidden">Посмотреть изменения</span>
           </button>
           <div class="results__slider-img">
-            <img class="results__img" src="img/pictures/cat-slim-mobile.png" width="280" height="256"
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/pictures/cat-slim-tablet.png, img/pictures/cat-slim-tablet@2x.png 2x" width="560" height="512">
+              <img class="results__img" src="img/pictures/cat-slim-mobile.png" srcset="img/pictures/cat-slim-mobile@2x.png 2x"width="280" height="256"
               alt="Фотография стройного кота Бориса после замены корма.">
+            </picture>
           </div>
         </div>
       </div>

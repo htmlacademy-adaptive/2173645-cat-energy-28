@@ -1,9 +1,13 @@
 .hero {
   padding: 27px 0 0 0;
-  background: url("../img/deco/cat-lick.jpg") top no-repeat;
+  background: url("../img/deco/cat-background-mob.jpg") top / 320px auto no-repeat;
+
+  @include dp {
+    background: url("../img/deco/cat-background-mob@2x.jpg") top / 320px auto no-repeat;
+  }
 
   @include vp-tab {
-    padding: 54px 0 0 0;
+    padding: 45px 0 0 0;
     background: initial;
   }
 
@@ -60,23 +64,20 @@
 }
 
 .hero__picture {
+  max-width: initial;
   margin-bottom: 3px;
 
   @include vp-tab {
     position: absolute;
     z-index: -1;
     bottom: -23px;
-    right: -43px;
-    width: 709px;
-    height: 609px;
+    right: -1px;
     pointer-events: none;
   }
 
   @include vp-desk {
-    top: -82px;
-    left: 385px;
-    width: 552px;
-    height: 499px;
+    top: -85px;
+    left: 368px;
   }
 }
 

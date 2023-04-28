@@ -15,7 +15,6 @@
   }
 }
 
-// что-то с этим сделать
 .program__inner {
   @include vp-tab {
     position: relative;
@@ -35,6 +34,14 @@
     left: 3px;
     margin-right: 20px;
 
+
+    @include vp-tab {
+      top: 1%;
+      left: 116%;
+      width: 200px;
+      height: 211px;
+    }
+
     @include vp-desk {
       width: 100px;
       height: 106px;
@@ -46,6 +53,13 @@
     margin: 5px 4px 0 0;
     left: -7px;
 
+    @include vp-tab {
+      top: 4%;
+      left: 106%;
+      width: 268px;
+      height: 200px;
+    }
+
     @include vp-desk {
       width: 134px;
       height: 100px;
@@ -56,8 +70,6 @@
 
   @include vp-tab {
     position: absolute;
-    top: 27%;
-    left: 138%;
   }
 
   @include vp-desk {
