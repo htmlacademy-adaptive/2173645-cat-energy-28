@@ -6,12 +6,14 @@
 }
 
 .socials__link {
+  color: $color-dim-gray;
+
   &:hover {
-    fill: $color-apple;
+    color: $color-apple;
   }
 
   &:active {
     opacity: 0.3;
-    fill: $color-apple;
+    color: $color-apple;
   }
 }

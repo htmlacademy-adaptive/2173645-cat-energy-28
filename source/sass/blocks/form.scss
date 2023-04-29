@@ -153,8 +153,8 @@
   position: absolute;
   width: 13px;
   height: 13px;
-  top: 6.5px;
-  right: 7.5px;
+  top: 7px;
+  right: 7px;
   background: $color-apple;
   border-radius: 50%;
 
@@ -286,9 +286,8 @@
     content: "";
     position: absolute;
     z-index: -1;
-    left: 0;
     top: 19px;
-    width: calc(100% + 20px);
+    width: 100vw;
     height: 2px;
     background: $color-apple;
   }
@@ -311,17 +310,19 @@
       max-width: 100%;
     }
 
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 27px;
+      left: -100%;
+      width: 100vw;
+      height: 2px;
+      background: $color-apple;
+    }
+
     &::after {
       top: 27px;
-      left: -70px;
-      width: calc(100% + 140px);
-    }
-  }
-  // Знаю, что это не правильно, но как правильно - не знаю)
-  @include vp-desk {
-    &::after {
-      left: -110px;
-      width: calc(100% + 220px);
     }
   }
 }

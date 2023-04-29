@@ -13,9 +13,9 @@
   &:hover {
     background: $color-limeade;
   }
-  // Я правильно понял, что прозрачным должен становиться только текст? Тогда не знаю, как сделать
+
   &:active {
-    opacity: 0.3;
+    color: rgba($color-default-white, 0.3);
   }
 }
 

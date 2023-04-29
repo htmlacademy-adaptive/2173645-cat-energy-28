@@ -1,9 +1,9 @@
 .hero {
   padding: 27px 0 0 0;
-  background: url("../img/deco/cat-background-mob.jpg") top / 320px auto no-repeat;
+  background: $green-to-white, url("../img/deco/cat-background-mob.jpg") top / 320px auto no-repeat;
 
   @include dp {
-    background: url("../img/deco/cat-background-mob@2x.jpg") top / 320px auto no-repeat;
+    background: $green-to-white, url("../img/deco/cat-background-mob@2x.jpg") top / 320px auto no-repeat;
   }
 
   @include vp-tab {
@@ -32,6 +32,23 @@
     max-width: 420px;
     margin: 0 0 0 80px;
     min-height: 532px;
+  }
+}
+
+.hero__inner::before {
+  @include vp-desk {
+    content: "";
+    position: absolute;
+    top: -43%;
+    left: 126%;
+    z-index: -1;
+    width: 720px;
+    height: 694px;
+    background: $green, url("../img/deco/cat-background-desk.jpg") no-repeat;
+
+    @include dp {
+      background: $green, url("../img/deco/cat-background-desk@2x.jpg") center / cover no-repeat;
+    }
   }
 }
 

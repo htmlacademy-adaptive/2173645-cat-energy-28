@@ -1,5 +1,6 @@
 .additional-products {
   padding: 20px 0 35px 0;
+  overflow: hidden;
 
   @include vp-tab {
     padding: 20px 0 86px 0;
@@ -26,21 +27,12 @@
     z-index: -1;
     left: 0;
     top: 14px;
-    width: calc(100% + 20px);
+    width: 100vw;
     height: 2px;
     background: $color-apple;
 
-    // без понятия как сделать чтоб он нормально тянулся и прокрутка не появлялась
     @include vp-tab {
       top: 22px;
-      left: -30px;
-      width: calc(100% + 60px);
-    }
-
-    @include vp-desk {
-      top: 22px;
-      left: -200px;
-      width: calc(100% + 310px);
     }
   }
 
@@ -49,6 +41,17 @@
     padding: 0 37px;
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: -100%;
+      top: 22px;
+      width: 100vw;
+      height: 2px;
+      background: $color-apple;
+    }
   }
 
   @include vp-desk {
@@ -192,20 +195,20 @@
   align-items: center;
   gap: 35px;
   padding: 59px 43px 30px;
-  background: url("../img/deco/cat-bag-mob.jpg") center/cover no-repeat;
+  background: $green, url("../img/deco/cat-bag-mob.jpg") center/cover no-repeat;
 
   @include dp {
-    background: url("../img/deco/cat-bag-mob@2x.jpg") center/cover no-repeat;
+    background: $green, url("../img/deco/cat-bag-mob@2x.jpg") center/cover no-repeat;
   }
 
   @include vp-tab {
     flex-direction: row;
     justify-content: space-between;
     padding: 53px 124px 55px 79px;
-    background: url("../img/deco/cat-bag-tab.jpg") center/cover no-repeat;
+    background: $green, url("../img/deco/cat-bag-tab.jpg") center/cover no-repeat;
 
     @include dp {
-      background: url("../img/deco/cat-bag-tab@2x.jpg") center/cover no-repeat;
+      background: $green, url("../img/deco/cat-bag-tab@2x.jpg") center/cover no-repeat;
     }
   }
 
@@ -213,10 +216,10 @@
     width: 20%;
     flex-direction: column;
     padding: 55px 42px 26px;
-    background: url("../img/deco/cat-bag-mob.jpg") center/cover no-repeat;
+    background: $green, url("../img/deco/cat-bag-mob.jpg") center/cover no-repeat;
 
     @include dp {
-      background: url("../img/deco/cat-bag-mob@2x.jpg") center/cover no-repeat;
+      background: $green, url("../img/deco/cat-bag-mob@2x.jpg") center/cover no-repeat;
     }
   }
 }

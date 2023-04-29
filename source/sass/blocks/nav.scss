@@ -9,29 +9,9 @@
     font-size: 18px;
     line-height: 24px;
   }
-}
 
-
-.nav--back {
   @include vp-desk {
-    position: relative;
-  }
-}
-
-.nav--back::before {
-  @include vp-desk {
-    content: "";
-    position: absolute;
-    top: -68px;
-    right: -110px;
-    z-index: -1;
-    width: 720px;
-    height: 694px;
-    background: url("../img/deco/cat-background-desk.jpg") no-repeat;
-
-    @include dp {
-      background: url("../img/deco/cat-background-desk@2x.jpg") center / cover no-repeat;
-    }
+    max-width: 50%;
   }
 }
 
@@ -114,9 +94,10 @@
 
   @include vp-tab {
     flex-direction: row;
-    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+    flex-wrap: wrap;
     column-gap: 37px;
-    row-gap: 10px;
+    row-gap: 25px;
   }
 }
 

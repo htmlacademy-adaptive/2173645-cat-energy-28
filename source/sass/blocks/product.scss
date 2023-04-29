@@ -149,19 +149,16 @@
 
 .product__description {
   font-family: $ff-lato;
+  font-size: 12px;
 
   &--center {
     margin: 0;
     text-align: center;
 
     @include vp-tab {
+      justify-self: center;
+      max-width: 170px;
       margin-bottom: 64px;
-    }
-  }
-
-  &--center br {
-    @include vp-mob {
-      display: none;
     }
   }
 }

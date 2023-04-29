@@ -1,13 +1,18 @@
 .program-form {
   padding: 27px 0 32px 0;
+  overflow: hidden;
 
   @include vp-tab {
-    padding: 53px 0 72px 0;
+    padding: 45px 0 72px 0;
   }
 
   @include vp-desk {
     padding: 43px 0 82px 0;
   }
+}
+
+.program-form .container {
+  padding: 0 70px;
 }
 
 .program-form__title {
