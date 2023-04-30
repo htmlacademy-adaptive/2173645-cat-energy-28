@@ -12,7 +12,9 @@
 }
 
 .program-form .container {
-  padding: 0 70px;
+  @include vp-tab {
+    padding: 0 70px;
+  }
 }
 
 .program-form__title {
