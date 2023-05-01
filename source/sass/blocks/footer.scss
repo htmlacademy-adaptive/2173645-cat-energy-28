@@ -87,12 +87,17 @@
   color: $color-charcoal;
 
   &:hover {
-    fill: $color-apple;
+    svg {
+      fill: $color-apple;
+    }
   }
 
   &:active {
     opacity: 0.3;
-    fill: $color-apple;
+
+    svg {
+      fill: $color-apple;
+    }
   }
 
   @include vp-tab {

@@ -1,9 +1,9 @@
 .header {
   position: relative;
-  padding: 13px 0 15px 0;
+  padding: 10px 0 15px 0;
 
   @include vp-tab {
-    padding: 11px 0 15px 0;
+    padding: 2px 0 15px 0;
   }
 
   @include vp-desk {
@@ -33,10 +33,6 @@
 }
 
 .header__logo {
-  display: flex;
-  justify-content: space-between;
-  width: 190px;
-
   &--current {
     pointer-events: none;
   }
@@ -47,15 +43,5 @@
 
   &:active {
     opacity: 0.6;
-  }
-
-  @include vp-tab {
-    justify-content: flex-start;
-    width: 174px;
-  }
-
-  @include vp-desk {
-    width: 202px;
-    height: 59px;
   }
 }

@@ -9,13 +9,12 @@
   }
 
   @include vp-desk {
-    width: 570px;
-    min-height: 374px;
+    min-width: 450px;
+    max-width: 570px;
     padding: 40px 28px 57px 53px;
   }
 }
 
-// что-то с этим сделать
 .program__inner {
   @include vp-tab {
     position: relative;
@@ -35,6 +34,14 @@
     left: 3px;
     margin-right: 20px;
 
+
+    @include vp-tab {
+      top: 1%;
+      left: 116%;
+      width: 200px;
+      height: 211px;
+    }
+
     @include vp-desk {
       width: 100px;
       height: 106px;
@@ -46,6 +53,13 @@
     margin: 5px 4px 0 0;
     left: -7px;
 
+    @include vp-tab {
+      top: 4%;
+      left: 106%;
+      width: 268px;
+      height: 200px;
+    }
+
     @include vp-desk {
       width: 134px;
       height: 100px;
@@ -56,8 +70,6 @@
 
   @include vp-tab {
     position: absolute;
-    top: 27%;
-    left: 138%;
   }
 
   @include vp-desk {
@@ -126,9 +138,13 @@
   font-size: 16px;
   line-height: 16px;
 
-  // Не получилось сделать так чтоб стрелка увеличивалась при ховере и активации
   &:active {
     opacity: 0.3;
+
+    &::after {
+      clip-path: none;
+      margin-left: 25px;
+    }
   }
 
   @include vp-tab {
@@ -139,12 +155,13 @@
   &::after {
     content: "";
     margin-left: 15px;
-    width: 24px;
+    width: 32px;
     height: 12px;
     background: url("../img/deco/arrow.svg") no-repeat;
+    clip-path: inset(0 0 0 7px);
 
     @include vp-tab {
-      margin-left: 26px;
+      margin-left: 18px;
     }
   }
 }

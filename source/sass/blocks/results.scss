@@ -4,11 +4,12 @@
 
   @include vp-tab {
     padding: 29px 0 100px;
-    background-color: $color-default-white;
+    background: $white-to-grey;
   }
 
   @include vp-desk {
     padding: 9px 0 0;
+    background: $white-to-grey-2;
   }
 }
 
@@ -62,7 +63,7 @@
   align-items: center;
   gap: 8px;
   padding: 15px 20px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $color-very-light-grey;
   border-radius: 3px;
 
   @include vp-tab {
@@ -108,10 +109,6 @@
   @include vp-tab {
     gap: 40px;
   }
-
-  @include vp-desk {
-    gap: 38px;
-  }
 }
 
 .results__terms-desc {
@@ -144,6 +141,11 @@
     line-height: 14px;
     background: $color-default-white;
   }
+
+  @include vp-desk {
+    background: $color-white-smoke;
+  }
+
 }
 
 .results__text-wrapper {
@@ -178,33 +180,19 @@
   margin: 0 auto;
 
   @include vp-tab {
-    // как сделать фон серый я так и не понял, псевдо?
     width: 560px;
     height: 512px;
   }
 }
 
-// Изначально не заметил серый фон и сделал jpg, как сделать адеватно с png - не знаю
-
 .results__slider-img {
   position: absolute;
-  width: auto;
-  height: auto;
-  overflow: hidden;
 
   &--overlay {
     z-index: 2;
   }
 }
 
-.results__img {
-  @include vp-tab {
-    width: 560px;
-    height: 512px;
-  }
-}
-
-// Не удалось сделать линию за кнопкой
 .results__slider-control {
   position: absolute;
   z-index: 4;
@@ -213,12 +201,15 @@
   background: initial;
   border: 0;
 
-  &:hover rect {
-    stroke: $color-apple;
-  }
+  &:hover {
+    rect,
+    path {
+      stroke: $color-apple;
+    }
 
-  &:hover path {
-    fill: $color-apple;
+    path {
+      fill: $color-apple;
+    }
   }
 
   &:hover::before {
@@ -229,11 +220,6 @@
     opacity: 0.6;
   }
 
-  @include vp-tab {
-    top: 236px !important;
-    right: 259px !important;
-  }
-
   &::before {
     content: "";
     position: absolute;
@@ -242,7 +228,7 @@
     z-index: 3;
     width: 4px;
     height: 256px;
-    background: #666666;
+    background: $color-dim-gray;
 
     @include vp-tab {
       top: -236px;
@@ -251,17 +237,17 @@
   }
 }
 
-.results__slider__svg {
+.results__slider-svg {
   position: absolute;
   top: 0;
   right: 0;
   z-index: 5;
 
   & path {
-    fill: #666666;
+    fill: $color-dim-gray;
   }
 
   & rect {
-    stroke: #666666;
+    stroke: $color-dim-gray;
   }
 }

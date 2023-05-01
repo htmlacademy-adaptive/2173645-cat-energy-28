@@ -6,16 +6,30 @@
   @include list-reset;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  gap: 20px;
+  margin-bottom: -20px;
 
   @include vp-tab {
-    gap: 30px;
+    margin-bottom: -30px;
   }
 
   @include vp-desk {
     flex-direction: row;
-    align-items: center;
-    gap: 80px;
+    flex-wrap: wrap;
+    width: calc(100% + 80px);
+    margin-bottom: -80px;
+  }
+}
+
+.programs__list-item {
+  margin-bottom: 20px;
+
+  @include vp-tab {
+    margin-bottom: 30px;
+  }
+
+  @include vp-desk {
+    width: calc(50% - 80px);
+    margin-right: 80px;
+    margin-bottom: 80px;
   }
 }

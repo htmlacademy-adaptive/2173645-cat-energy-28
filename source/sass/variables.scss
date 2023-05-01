@@ -9,11 +9,25 @@ $color-transparent: rgba(255, 255, 255, 0);
 
 // Project palette
 $color-apple: #68b738;
+$color-limeade: #5eaa2f;
 $color-white-smoke: #f2f2f2;
 $color-gainsboro:#d9d9d9;
 $color-charcoal: #444444;
 $color-nero: #222222;
 $color-black: #111111;
+$color-dim-gray: #666666;
+$color-whisper: #ebebeb;
+$color-whisper2: #e7e7e7;
+$color-very-light-grey: #cdcdcd;
+$color-light-grey: #d3d3d3;
+$color-light-coral: #ff8282;
+$color-silver: #bababa;
+
+// Gradient
+$green-to-white: linear-gradient(rgba(104, 183, 56, 0.85) 302px, #ffffff 302px);
+$green: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85));
+$white-to-grey: linear-gradient(#ffffff 57%, #eaeaea 57%);
+$white-to-grey-2: linear-gradient(#ffffff 24%, #f2f2f2 24%);
 
 // Typography
 // ---------------------------------

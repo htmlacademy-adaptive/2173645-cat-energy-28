@@ -22,3 +22,8 @@
   }
 }
 
+@mixin dp {
+  @media (min-resolution: 2dppx) {
+    @content;
+  }
+}
