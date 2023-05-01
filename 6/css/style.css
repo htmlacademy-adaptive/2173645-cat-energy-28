@@ -1600,7 +1600,7 @@ main {
     content: "";
     position: absolute;
     z-index: -1;
-    left: -100%;
+    left: -100vw;
     top: 22px;
     width: 100vw;
     height: 2px;
@@ -1824,8 +1824,10 @@ main {
   }
 }
 
-.program-form .container {
-  padding: 0 70px;
+@media (min-width: 768px) {
+  .program-form .container {
+    padding: 0 70px;
+  }
 }
 
 .program-form__title {
@@ -2165,7 +2167,7 @@ main {
     position: absolute;
     z-index: -1;
     top: 27px;
-    left: -100%;
+    left: -100vw;
     width: 100vw;
     height: 2px;
     background: #68b738;
