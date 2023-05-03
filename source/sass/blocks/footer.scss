@@ -83,23 +83,22 @@
   line-height: 19px;
   color: $color-charcoal;
 
-  &:hover {
-    svg {
-      fill: $color-apple;
-    }
+  &:hover .footer__logo-academy-icon {
+    fill: $color-apple;
   }
 
   &:active {
     opacity: 0.3;
-
-    svg {
-      fill: $color-apple;
-    }
+    fill: $color-apple;
   }
 
   @include vp-tab {
     width: 168px;
   }
+}
+
+.footer__logo-academy-icon {
+  fill: $color-dim-gray;
 }
 
 .footer__logo-academy-text {
