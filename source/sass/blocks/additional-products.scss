@@ -3,6 +3,10 @@
   overflow: hidden;
 
   @include vp-tab {
+    padding: 20px 0 76px 0;
+  }
+
+  @include vp-desk {
     padding: 20px 0 86px 0;
   }
 }
@@ -73,8 +77,8 @@
   flex-direction: column;
   justify-content: center;
   flex-grow: 1;
-  gap: 19px;
-  margin-bottom: 56px;
+  gap: 20px;
+  margin-bottom: 53px;
 
   @include vp-tab {
     gap: 0;
@@ -164,7 +168,9 @@
 }
 
 .additional-products__package {
-  width: 200px;
+  @include vp-desk {
+    width: 200px;
+  }
 }
 
 

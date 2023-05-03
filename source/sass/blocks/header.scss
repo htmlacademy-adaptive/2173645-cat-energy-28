@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  flex-shrink: 0;
   padding: 10px 0 15px 0;
 
   @include vp-tab {
@@ -33,15 +34,11 @@
 }
 
 .header__logo {
-  &--current {
-    pointer-events: none;
-  }
-
-  &:hover {
+  &:hover[href] {
     opacity: 0.8;
   }
 
-  &:active {
+  &:active[href] {
     opacity: 0.6;
   }
 }

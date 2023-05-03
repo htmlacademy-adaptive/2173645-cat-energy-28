@@ -145,7 +145,6 @@
   @include vp-desk {
     background: $color-white-smoke;
   }
-
 }
 
 .results__text-wrapper {
@@ -195,21 +194,18 @@
 
 .results__slider-control {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  left: 50%;
   z-index: 4;
   width: 40px;
   height: 40px;
-  background: initial;
+  background: none;
   border: 0;
+  color: $color-dim-gray;
 
   &:hover {
-    rect,
-    path {
-      stroke: $color-apple;
-    }
-
-    path {
-      fill: $color-apple;
-    }
+    color: $color-apple;
   }
 
   &:hover::before {
@@ -242,12 +238,14 @@
   top: 0;
   right: 0;
   z-index: 5;
+}
 
-  & path {
-    fill: $color-dim-gray;
+.results__img {
+  &--primary {
+    clip-path: inset(0 50% 0 0);
   }
 
-  & rect {
-    stroke: $color-dim-gray;
+  &--secondary {
+    clip-path: inset(0 0 0 50%);
   }
 }
