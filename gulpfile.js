@@ -6,7 +6,6 @@ import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
 import htmlmin from 'gulp-htmlmin';
 import rename from 'gulp-rename';
-// В примере было, но для чего мы его подлючали я так и не понял?
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
