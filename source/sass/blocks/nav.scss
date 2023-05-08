@@ -142,11 +142,11 @@
   position: relative;
   padding: 21px 22px 24px;
 
-  &:hover {
+  &:hover[href] {
     opacity: 0.6;
   }
 
-  &:active {
+  &:active[href] {
     opacity: 0.3;
   }
 
@@ -161,8 +161,6 @@
 }
 
 .nav__link--current {
-  pointer-events: none;
-
   @include vp-tab {
     &::after {
       content: "";

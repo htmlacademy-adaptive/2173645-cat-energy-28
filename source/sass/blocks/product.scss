@@ -3,13 +3,14 @@
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   min-height: 190px;
+  row-gap: 10px;
 
   @include vp-tab {
     grid-template-columns: 1fr;
-    gap: 44px;
+    gap: 42px;
     width: 324px;
     margin: 81px 0 0;
-    padding: 162px 36px 39px;
+    padding: 161px 37px 38px;
     background: $color-white-smoke;
 
     &--primary {
@@ -20,17 +21,19 @@
 
   @include vp-desk {
     width: 245px;
-    padding: 162px 39px 39px;
   }
 }
 
 .product--primary {
   position: relative;
   grid-template-columns: 1fr;
-  padding: 40px 0 0;
+  gap: 0;
+  padding: 73px 0 0;
 
   @include vp-tab {
     padding: 162px 36px 39px;
+    gap: 24px;
+    border: 2px solid $color-white-smoke;
   }
 
   &::before {
@@ -69,11 +72,26 @@
 
 .product__link {
   justify-self: center;
+  align-self: end;
 
   &--img {
     @include vp-tab {
       position: absolute;
+      top: 8px;
+    }
+
+    @include vp-desk {
       top: 0;
+    }
+  }
+
+  &--small {
+    @include vp-tab {
+      top: 36px;
+    }
+
+    @include vp-desk {
+      top: 28px;
     }
   }
 }
@@ -84,19 +102,25 @@
     gap: 21px;
     width: 100%;
   }
+
+  @include vp-desk {
+    gap: 25px;
+  }
 }
 
 .product__desc-list {
+  margin: 0;
+
   @include vp-tab {
     display: grid;
-    gap: 14px;
-    margin: 0;
+    gap: 16px;
   }
 }
 
 
 .product__title {
   max-width: 76px;
+  margin: 17px 0 15px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -104,21 +128,24 @@
 
   @include vp-tab {
     max-width: 170px;
+    margin: 0;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-    margin: 0;
+  }
+
+  @include vp-desk {
+    line-height: 21px;
   }
 
   &--primary {
     max-width: 100%;
-    margin: 30px 0 0;
+    margin: 0;
     text-align: center;
     color: $color-black;
 
     @include vp-tab {
       line-height: 22px;
-      margin: 0;
     }
   }
 }
@@ -150,10 +177,16 @@
 .product__description {
   font-family: $ff-lato;
   font-size: 12px;
+  line-height: 16px;
+
+  @include vp-tab {
+    font-size: 16px;
+  }
 
   &--center {
     margin: 0;
     text-align: center;
+    align-self: start;
 
     @include vp-tab {
       justify-self: center;

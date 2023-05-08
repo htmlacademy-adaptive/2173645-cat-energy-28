@@ -60,20 +60,28 @@
     padding: 29px 0 48px;
     gap: 12px;
 
-
     &::after {
       content: counter(verse);
       position: absolute;
       z-index: -1;
-      top: 42%;
+      top: -4%;
       right: 5%;
       font-size: 280px;
+      line-height: 1;
       color: $color-white-smoke;
     }
   }
 
   @include vp-desk {
     width: 260px;
+  }
+}
+
+.advantages__inner--one {
+  @include vp-tab {
+    &::after {
+      right: 13%;
+    }
   }
 }
 

@@ -2,7 +2,7 @@
   padding: 27px 0 25px 0;
 
   @include vp-tab {
-    padding: 53px 0 48px 0;
+    padding: 45px 0;
   }
 
   @include vp-desk {
@@ -31,7 +31,7 @@
 
   @include vp-desk {
     grid-template-columns: repeat(4, 1fr);
-    gap: 64px 80px;
+    gap: 63px 80px;
   }
 }
 

@@ -39,15 +39,16 @@
   @include vp-desk {
     content: "";
     position: absolute;
-    top: -43%;
-    left: 126%;
+    pointer-events: none;
+    top: -226px;
+    left: 529px;
     z-index: -1;
     width: 720px;
     height: 694px;
     background: $green, url("../img/deco/cat-background-desk.jpg") no-repeat;
 
     @include dp {
-      background: $green, url("../img/deco/cat-background-desk@2x.jpg") center / cover no-repeat;
+      background: $green, url("../img/deco/cat-background-desk@2x.jpg") left / cover no-repeat;
     }
   }
 }
@@ -80,21 +81,20 @@
   }
 }
 
-.hero__picture {
-  max-width: initial;
-  margin-bottom: 3px;
-
+.hero__picture-wrapper {
   @include vp-tab {
     position: absolute;
     z-index: -1;
-    bottom: -23px;
+    bottom: -22px;
     right: -1px;
+    width: 709px;
     pointer-events: none;
   }
 
   @include vp-desk {
     top: -85px;
     left: 368px;
+    width: 552px;
   }
 }
 

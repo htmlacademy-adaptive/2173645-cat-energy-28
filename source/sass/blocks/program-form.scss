@@ -15,6 +15,10 @@
   @include vp-tab {
     padding: 0 70px;
   }
+
+  @include vp-desk {
+    padding: 0 40px;
+  }
 }
 
 .program-form__title {

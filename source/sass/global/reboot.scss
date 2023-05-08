@@ -21,8 +21,6 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   background-color: $color-default-white;
 }
@@ -40,5 +38,4 @@ img {
 
 main {
   flex-grow: 1;
-  // overflow: hidden;
 }
