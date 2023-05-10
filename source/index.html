@@ -4,8 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Кэт энерджи - Функциональное питание для котов, главная страница">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/fav/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/fav/apple.png">
@@ -54,9 +57,14 @@
             <p class="hero__description">ЗАНЯЛСЯ СОБОЙ? ЗАЙМИСЬ КОТОМ!</p>
             <div class="hero__picture-wrapper">
               <picture>
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/pictures/cat-energy-chicken-desk@2x.webp, img/pictures/cat-energy-chicken-desk@2x.webp 2x" width="552" height="499">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/pictures/cat-energy-chicken-tablet@2x.webp, img/pictures/cat-energy-chicken-tablet@2x.webp 2x" width="709" height="609">
-                <source type="image/webp" srcset="img/pictures/cat-energy-chicken-mobile@2x.webp, img/pictures/cat-energy-chicken-mobile@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/pictures/cat-energy-chicken-desk.webp, img/pictures/cat-energy-chicken-desk@2x.webp 2x"
+                  width="552" height="499">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/pictures/cat-energy-chicken-tablet.webp, img/pictures/cat-energy-chicken-tablet@2x.webp 2x"
+                  width="709" height="609">
+                <source type="image/webp"
+                  srcset="img/pictures/cat-energy-chicken-mobile.webp, img/pictures/cat-energy-chicken-mobile@2x.webp 2x">
                 <source media="(min-width: 1440px)"
                   srcset="img/pictures/cat-energy-chicken-desk.png, img/pictures/cat-energy-chicken-desk@2x.png 2x"
                   width="552" height="499">
@@ -177,12 +185,17 @@
           <div class="results__slider">
             <div class="results__slider-img results__slider-img--overlay">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/pictures/cat-fat-tablet.webp, img/pictures/cat-fat-tablet@2x.webp 2x" width="560"
+                  height="512">
+                <source type="image/webp"
+                  srcset="img/pictures/cat-fat-mobile.webp, img/pictures/cat-fat-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/pictures/cat-fat-tablet.png, img/pictures/cat-fat-tablet@2x.png 2x" width="560"
                   height="512">
                 <img class="results__img results__img--primary" src="img/pictures/cat-fat-mobile.png"
                   srcset="img/pictures/cat-fat-mobile@2x.png 2x" width="280" height="256"
-                  alt="Фотография крупного кота Бориса до замены корма.">
+                  alt="Фотография крупного кота Бориса до замены корма." loading="lazy">
               </picture>
             </div>
             <button class="results__slider-control" type="button">
@@ -193,12 +206,17 @@
             </button>
             <div class="results__slider-img">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/pictures/cat-slim-tablet.webp, img/pictures/cat-slim-tablet@2x.webp 2x" width="560"
+                  height="512">
+                <source type="image/webp"
+                  srcset="img/pictures/cat-slim-mobile.webp, img/pictures/cat-slim-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/pictures/cat-slim-tablet.png, img/pictures/cat-slim-tablet@2x.png 2x" width="560"
                   height="512">
                 <img class="results__img results__img--secondary" src="img/pictures/cat-slim-mobile.png"
                   srcset="img/pictures/cat-slim-mobile@2x.png 2x" width="280" height="256"
-                  alt="Фотография стройного кота Бориса после замены корма.">
+                  alt="Фотография стройного кота Бориса после замены корма." loading="lazy">
               </picture>
             </div>
           </div>
@@ -215,18 +233,24 @@
         <div class="address-info__map">
           <div class="address-info__map-inner">
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)"
+                srcset="img/pictures/location-desk.webp, img/pictures/location-desk@2x.webp 2x" width="1440"
+                height="400">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/pictures/location-tab.webp, img/pictures/location-tab@2x.webp 2x" width="768" height="400">
+              <source type="image/webp" srcset="img/pictures/location-mob.webp, img/pictures/location-mob@2x.webp 2x">
               <source media="(min-width: 1440px)"
                 srcset="img/pictures/location-desk.jpg, img/pictures/location-desk@2x.jpg 2x" width="1440" height="400">
               <source media="(min-width: 768px)"
                 srcset="img/pictures/location-tab.jpg, img/pictures/location-tab@2x.jpg 2x" width="768" height="400">
               <img class="address-info__map-img" src="img/pictures/location-mob.jpg"
                 srcset="img/pictures/location-mob@2x.jpg 2x" width="320" height="362"
-                alt="Карта с местоположением офиса.">
+                alt="Карта с местоположением офиса." loading="lazy">
             </picture>
           </div>
           <iframe class="address-info__iframe"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198245!2d30.320472477418704!3d59.938719162093456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1682002577462!5m2!1sru!2sru"
-            width="100%" height="362" style="border: 0;" allowfullscreen="" loading="lazy"
+            width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></iframe>
         </div>
@@ -236,7 +260,7 @@
       <div class="container">
         <a class="footer__logo">
           <img class="footer__logo-img" src="img/logos/footer-logo.svg" width="128" height="24"
-            alt="Логотип сайта Кэт энерджи.">
+            alt="Логотип сайта Кэт энерджи." loading="lazy">
         </a>
         <div class="footer__socials socials">
           <ul class="socials__list">
@@ -250,7 +274,7 @@
             </li>
             <li class="socials__list-item">
               <a class="socials__link" href="https://www.youtube.com/user/htmlacademyru">
-                <svg width="29" height="22" >
+                <svg width="29" height="22">
                   <use xlink:href="img/sprite.svg#icon-youtube"></use>
                 </svg>
                 <span class="visually-hidden">YouTube</span>
@@ -277,7 +301,7 @@
       </div>
     </footer>
   </div>
-  <script src="js/nav.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

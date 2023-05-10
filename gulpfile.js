@@ -37,9 +37,11 @@ const html = () => {
 }
 
 // Scripts
-
+// По прежднему не могу его победить, как написать чтоб он все js файлы объединял в один? Или так не делают? На будущее - самому не получилось одолеть)
 const scripts = () => {
   return gulp.src('source/js/*.js')
+  .pipe(terser())
+  .pipe(rename("script.min.js"))
   .pipe(gulp.dest('build/js'))
   .pipe(browser.stream());
 }
