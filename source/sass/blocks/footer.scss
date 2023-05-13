@@ -71,7 +71,10 @@
 }
 
 .footer__copyright {
+  width: 280px;
+
   @include vp-tab {
+    width: auto;
     justify-self: end;
   }
 }
@@ -79,6 +82,8 @@
 .footer__logo-academy {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   font-family: $ff-lato;
   line-height: 19px;
   color: $color-charcoal;
@@ -93,7 +98,7 @@
   }
 
   @include vp-tab {
-    width: 168px;
+    width: 170px;
   }
 }
 
@@ -102,8 +107,6 @@
 }
 
 .footer__logo-academy-text {
-  margin-right: 140px;
-
   @include vp-tab {
     margin-right: 28px;
   }

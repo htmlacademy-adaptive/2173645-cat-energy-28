@@ -28,6 +28,7 @@
   }
 
   @include vp-desk {
+    display: flex;
     width: calc(50% - 80px);
     margin-right: 80px;
     margin-bottom: 80px;

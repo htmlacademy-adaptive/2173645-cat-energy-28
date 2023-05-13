@@ -12,6 +12,7 @@
 
 .catalog__title {
   margin: 0 0 41px;
+  word-break: break-word;
 
   @include vp-tab {
     margin: 0 0 82px;
@@ -48,6 +49,10 @@
       height: 1px;
       background: $color-whisper;
     }
+  }
+
+  @include vp-tab {
+    display: flex;
   }
 }
 

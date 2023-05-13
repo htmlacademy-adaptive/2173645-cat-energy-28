@@ -69,7 +69,6 @@
   }
 }
 
-
 .product__link {
   justify-self: center;
   align-self: end;
@@ -78,10 +77,12 @@
     @include vp-tab {
       position: absolute;
       top: 8px;
+      right: 80px;
     }
 
     @include vp-desk {
       top: 0;
+      right: initial;
     }
   }
 
@@ -153,6 +154,7 @@
 .product__inner {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   font-family: $ff-lato;
   font-size: 12px;
   line-height: 16px;
@@ -161,6 +163,7 @@
   @include vp-tab {
     font-size: 16px;
     position: relative;
+    word-break: break-word;
 
     &::after {
       content: "";

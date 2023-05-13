@@ -29,6 +29,8 @@
     z-index: -1;
     top: 0;
     width: 100vw;
+    min-height: 400px;
+    height: 100%;
   }
 }
 
@@ -41,6 +43,7 @@
 
   @include vp-tab {
     max-width: 768px;
+    height: 400px;
   }
 
   @include vp-desk {

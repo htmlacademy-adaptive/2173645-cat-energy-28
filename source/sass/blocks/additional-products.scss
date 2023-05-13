@@ -177,6 +177,7 @@
 .additional-products__inner {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   font-family: $ff-lato;
   font-size: 14px;
   line-height: 14px;

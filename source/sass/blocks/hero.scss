@@ -53,6 +53,20 @@
   }
 }
 
+.hero__inner::after {
+  @include vp-desk {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    top: -600px;
+    left: 529px;
+    z-index: -2;
+    width: 50vw;
+    height: 1068px;
+    background: $green;
+  }
+}
+
 .hero__title {
   margin: 0;
   margin-bottom: 25px;

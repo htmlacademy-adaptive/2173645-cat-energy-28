@@ -95,9 +95,14 @@
 .advantages__title {
   margin: 0;
   margin-bottom: 44px;
+  word-break: break-word;
 }
 
 .advantages__text {
+  @include vp-mob {
+    min-width: 200px;
+  }
+
   margin: 0;
   font-family: $ff-lato;
   font-size: 14px;

@@ -1,5 +1,5 @@
 .program-form {
-  padding: 27px 0 32px 0;
+  padding: 27px 0 34px 0;
   overflow: hidden;
 
   @include vp-tab {
@@ -23,6 +23,7 @@
 
 .program-form__title {
   margin: 0 0 37px;
+  word-break: break-word;
 
   @include vp-tab {
     margin: 0 0 57px;
