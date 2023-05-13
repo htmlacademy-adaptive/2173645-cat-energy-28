@@ -38,7 +38,10 @@ const html = () => {
 }
 
 // Scripts
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 const scripts = () => {
   return gulp.src('source/js/*.js')
   .pipe(gulp.dest('build/js'))

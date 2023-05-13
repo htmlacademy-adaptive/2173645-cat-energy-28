@@ -100,12 +100,12 @@
               </fieldset>
             </div>
             <fieldset class="form__fieldset form__fieldset--row">
-              <div class="form__legend-wrapper">
-                <legend class="form__legend form__legend--width">Контактные данные (владельца кота)</legend>
-              </div>
+              <legend class="form__legend-wrapper">
+                <h2 class="form__legend form__legend--width">Контактные данные (владельца кота)</h2>
+              </legend>
               <div class="form__group form__group--small-gap">
                 <label class="form__label" for="email">E-MAIL:*</label>
-                <input class="form__field form__field--small-padd" type="email" id="email" name="email"
+                <input class="form__field" type="email" id="email" name="email"
                   value="KUKLACHEV@GMAIL.COM" required>
                 <svg class="form__icon" width="20" height="20">
                   <use xlink:href="img/sprite.svg#icon-mail"></use>
@@ -113,7 +113,7 @@
               </div>
               <div class="form__group form__group--small-gap">
                 <label class="form__label" for="tel">ТЕЛЕФОН:*</label>
-                <input class="form__field form__field--small-padd" type="tel" id="tel" name="tel"
+                <input class="form__field" type="tel" id="tel" name="tel"
                   value="8 (960) 900-60-90" required pattern="\+?[0-9\s\-\(\)]+">
                 <svg class="form__icon" width="20" height="20">
                   <use xlink:href="img/sprite.svg#icon-tel"></use>
@@ -121,16 +121,16 @@
               </div>
             </fieldset>
             <fieldset class="form__fieldset">
-              <div class="form__legend-wrapper">
-                <legend class="form__legend">Комментарий</legend>
-              </div>
+              <legend class="form__legend-wrapper">
+                <h2 class="form__legend">Комментарий</h2>
+              </legend>
               <textarea class="form__textarea" name="cats-habits" id="cats-habits" cols="32"
                 rows="7">РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА</textarea>
             </fieldset>
             <fieldset class="form__fieldset">
-              <div class="form__legend-wrapper">
-                <legend class="form__legend form__legend--margin">Дополнительно</legend>
-              </div>
+              <legend class="form__legend-wrapper">
+                <h2 class="form__legend form__legend--margin">Дополнительно</h2>
+              </legend>
               <ul class="form__list form__list--primary">
                 <li class="form__item">
                   <label class="form__control">
@@ -174,7 +174,10 @@
           <h2 class="visually-hidden">Наше местоположение</h2>
           <div class="address">
             <p class="address__subtitle">ПРИГЛАШАЕМ К&nbsp;СОТРУДНИЧЕСТВУ ДИЛЕРОВ!</p>
-            <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <p class="address__text">
+              <span>ул. Большая Конюшенная, д. 19/8</span>
+              <span>Санкт-Петербург</span>
+            </p>
           </div>
         </div>
         <div class="address-info__map">

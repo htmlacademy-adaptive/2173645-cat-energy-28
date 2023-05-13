@@ -10,7 +10,8 @@
   }
 
   @include vp-desk {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 80px;
     padding: 0 0 60px 0;
   }
@@ -21,7 +22,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  gap: 12px;
+  gap: 20px;
   margin: 0;
   padding: 0;
   border: 0;
@@ -101,7 +102,8 @@
 
 .form__field {
   flex-grow: 1;
-  padding: 14px 16px 13px 20px;
+  width: 50%;
+  padding: 11px 40px 11px 20px;
   font: inherit;
   color: $color-charcoal;
   border: 1px solid $color-whisper2;
@@ -111,7 +113,8 @@
   }
 
   &:not(:placeholder-shown):focus {
-    outline: 2px solid $color-charcoal;
+    border: 1px solid $color-charcoal;
+    outline: 1px solid $color-charcoal;
   }
 
   &:not(:placeholder-shown):focus ~ .form__icon {
@@ -119,7 +122,8 @@
   }
 
   &--invalid {
-    outline: 2px solid $color-light-coral;
+    border: 1px solid $color-light-coral;
+    outline: 1px solid $color-light-coral;
   }
 
   &--invalid ~ .form__icon {
@@ -130,18 +134,33 @@
     opacity: 0.3;
   }
 
-  &:focus ~ .form__control-mark {
+  &:hover ~ .form__control-mark {
     border: solid 1px $color-silver;
   }
 
-  &--small-padd {
-    padding: 14px 38px 13px 14px;
+  &:focus ~ .form__control-mark {
+    border: solid 1px $color-silver;
   }
 
   @include vp-tab {
     font-size: 20px;
     line-height: 30px;
   }
+}
+
+.form__field[type="number"]::-webkit-outer-spin-button,
+.form__field[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.form__field[type="number"] {
+  appearance: textfield;
+}
+
+.form__field::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
 }
 
 .form__field[type="radio"]:disabled ~ span {
@@ -187,7 +206,7 @@
 
 .form__icon {
   position: absolute;
-  right: 16px;
+  right: 13px;
   stroke: $color-default-black;
 }
 
@@ -236,16 +255,15 @@
 
     @include vp-tab {
       display: grid;
-      grid-template-columns: repeat(2, max-content);
-      column-gap: 123px;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 60px;
       row-gap: 41px;
     }
 
     @include vp-desk {
-      // Не знаю каким образом поставить элементы, как по макету. Только если задать им ширину.
-      display: flex;
-      flex-direction: row;
-      gap: 136px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 80px;
     }
   }
 
@@ -269,17 +287,16 @@
 .form__legend-wrapper {
   position: relative;
   display: flex;
-
-  @include vp-desk {
-    grid-column: -1 / 1;
-  }
+  padding: 0;
+  width: 100%;
 }
 
 .form__legend {
-  margin-bottom: 27px;
+  margin: 0 0 39px;
   padding: 5px 23px 0 0;
   font-size: 24px;
   line-height: 26px;
+  font-weight: 400;
   background-color: $color-default-white;
 
   &::after {
@@ -294,16 +311,17 @@
 
   &--width {
     max-width: 205px;
+    word-break: break-word;
   }
 
   @include vp-tab {
-    margin: 0 0 62px -40px;
+    margin: 0 0 75px -40px;
     padding: 5px 40px 0 40px;
     font-size: 36px;
     line-height: 36px;
 
     &--margin {
-      margin-bottom: 51px;
+      margin-bottom: 63px;
     }
 
     &--width {
