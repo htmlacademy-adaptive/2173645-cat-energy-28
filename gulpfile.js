@@ -6,7 +6,6 @@ import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
 import htmlmin from 'gulp-htmlmin';
 import rename from 'gulp-rename';
-// В примере было, но для чего мы его подлючали я так и не понял?
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
@@ -38,12 +37,11 @@ const html = () => {
 }
 
 // Scripts
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 const scripts = () => {
   return gulp.src('source/js/*.js')
+  .pipe(terser())
+  .pipe(rename("script.min.js"))
   .pipe(gulp.dest('build/js'))
   .pipe(browser.stream());
 }
