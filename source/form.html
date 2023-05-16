@@ -67,7 +67,7 @@
                     max="25" min="1" step="0.1">
                 </div>
                 <div class="form__group">
-                  <label class="form__label" for="cats-weight">ВОЗРАСТ&nbsp;(ЛЕТ):</label>
+                  <label class="form__label" for="cats-age">ВОЗРАСТ&nbsp;(ЛЕТ):</label>
                   <input class="form__field" type="number" id="cats-age" name="cats-age" value="7" max="25">
                 </div>
               </fieldset>
@@ -107,16 +107,15 @@
               </legend>
               <div class="form__group form__group--small-gap">
                 <label class="form__label" for="email">E-MAIL:*</label>
-                <input class="form__field" type="email" id="email" name="email"
-                  value="KUKLACHEV@GMAIL.COM" required>
+                <input class="form__field" type="email" id="email" name="email" value="KUKLACHEV@GMAIL.COM" required>
                 <svg class="form__icon" width="20" height="20">
                   <use xlink:href="img/sprite.svg#icon-mail"></use>
                 </svg>
               </div>
               <div class="form__group form__group--small-gap">
                 <label class="form__label" for="tel">ТЕЛЕФОН:*</label>
-                <input class="form__field" type="tel" id="tel" name="tel"
-                  value="8 (960) 900-60-90" required pattern="\+?[0-9\s\-\(\)]+">
+                <input class="form__field" type="tel" id="tel" name="tel" value="8 (960) 900-60-90" required
+                  pattern="\+?[0-9\s\-\(\)]+">
                 <svg class="form__icon" width="20" height="20">
                   <use xlink:href="img/sprite.svg#icon-tel"></use>
                 </svg>
@@ -126,8 +125,8 @@
               <legend class="form__legend-wrapper">
                 <h2 class="form__legend">Комментарий</h2>
               </legend>
-              <textarea class="form__textarea" name="cats-habits" id="cats-habits" cols="32"
-                rows="7">РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА</textarea>
+              <textarea class="form__textarea" name="cats-habits" id="cats-habits" cols="32" rows="7"
+                aria-label="Текстовая форма для комментариев">РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА</textarea>
             </fieldset>
             <fieldset class="form__fieldset">
               <legend class="form__legend-wrapper">
@@ -155,7 +154,7 @@
                     <span class="form__label form__label--secondary">МОЛОКО</span>
                   </label>
                 </li>
-                <li class="formt__item">
+                <li class="form__item">
                   <label class="form__control">
                     <input class="form__field visually-hidden" type="checkbox" id="vitamins" name="vitamins">
                     <span class="form__control-mark form__control-mark--rectangle"></span>

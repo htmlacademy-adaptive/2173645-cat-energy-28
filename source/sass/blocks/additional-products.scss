@@ -145,6 +145,9 @@
   }
 
   @include vp-desk {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
     width: 610px;
   }
 }
@@ -184,10 +187,20 @@
   color: $color-charcoal;
 
   @include vp-tab {
-    gap: 49px;
+    display: grid;
+    grid-template-columns: 1fr 70px;
+    gap: 20px;
     font-size: 16px;
     line-height: 20px;
   }
+
+  @include vp-desk {
+    gap: 15px;
+  }
+}
+
+.additional-products__price {
+  justify-self: end;
 }
 
 .additional-products__button {
@@ -223,10 +236,10 @@
     width: 20%;
     flex-direction: column;
     padding: 55px 42px 26px;
-    background: $green, url("../img/deco/cat-bag-mob.jpg") center/cover no-repeat;
+    background: $green, url("../img/deco/cat-bag-desk.jpg") center/cover no-repeat;
 
     @include dp {
-      background: $green, url("../img/deco/cat-bag-mob@2x.jpg") center/cover no-repeat;
+      background: $green, url("../img/deco/cat-bag-desk@2x.jpg") center/cover no-repeat;
     }
   }
 }
