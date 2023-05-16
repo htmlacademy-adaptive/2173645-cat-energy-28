@@ -1,9 +1,9 @@
 .hero {
   padding: 27px 0 0 0;
-  background: $green-to-white, url("../img/deco/cat-background-mob.jpg") top / 320px auto no-repeat;
+  background: $green-to-white, url("../img/deco/cat-background-mob.jpg") top / 100% no-repeat;
 
   @include dp {
-    background: $green-to-white, url("../img/deco/cat-background-mob@2x.jpg") top / 320px auto no-repeat;
+    background: $green-to-white, url("../img/deco/cat-background-mob@2x.jpg") top / 100% no-repeat;
   }
 
   @include vp-tab {
@@ -43,7 +43,7 @@
     top: -226px;
     left: 529px;
     z-index: -1;
-    width: 720px;
+    width: 50vw;
     height: 694px;
     background: $green, url("../img/deco/cat-background-desk.jpg") no-repeat;
 

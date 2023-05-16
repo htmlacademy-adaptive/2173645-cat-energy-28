@@ -25,6 +25,11 @@
 }
 
 .footer__logo {
+  @include vp-tab {
+    width: 155px;
+    padding: 10px 10px 10px 0;
+  }
+
   &:hover[href] {
     opacity: 0.8;
   }
@@ -99,6 +104,7 @@
 
   @include vp-tab {
     width: 170px;
+    padding: 10px 0;
   }
 }
 

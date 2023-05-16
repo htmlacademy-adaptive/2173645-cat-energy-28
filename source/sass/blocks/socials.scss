@@ -3,10 +3,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 12px;
 }
 
 .socials__link {
+  padding: 10px 6px;
   color: $color-dim-gray;
 
   &:hover {
